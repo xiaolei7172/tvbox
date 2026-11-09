@@ -13,7 +13,7 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 | 需求 | 配置地址 | 点播源 | 直播 | 说明 |
 |---|---|---:|---:|---|
-| **⭐ 一站式（推荐）** | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox.json` | **506** | 14 | 全仓合并版，一次接入所有源 |
+| **⭐ 一站式（推荐）** | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox.json` | **436** | 14 | 全仓合并版，已剔除死链与重复源 |
 | wmz 原版 | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox-wmz.json` | 95 | 2 | 补齐主配置收不了的 16 个 jar 专属站（AList / 115 / 4K 网盘） |
 | 多仓入口 | `https://raw.githubusercontent.com/<user>/tvbox/master/repo.json` | — | — | 客户端显示仓库列表，自行切换 |
 | 电视首选 | `https://raw.githubusercontent.com/<user>/tvbox/master/jsm.json` | 158 | 3 | 家庭电视适用，已删 YouTube 直播 |
@@ -29,7 +29,7 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 | 项目 | 数值 |
 |---|---|
-| 站点总数 | 506（key/name 双重去重，零重复） |
+| 站点总数 | 436（key/name 双重去重 + 死链/重复源黑名单，零重复） |
 | 构成 | JS 源 246 · jar 内置 194 · 直连 API 52 · Python 源 14 |
 | 直播源 | 14 个（URL 规范化去重） |
 | 解析 | 48 个 |
@@ -59,7 +59,7 @@ https://ghproxy.net/
 
 ```
 .
-├── tvbox.json             ⭐ 全量合并配置（506 站，推荐单地址接入）
+├── tvbox.json             ⭐ 全量合并配置（436 站，推荐单地址接入）
 ├── tvbox-wmz.json         wmz 原版配置（95 站，配 jar/wmz.jar）
 ├── repo.json              多仓入口（客户端显示仓库列表）
 ├── *.json                 其余独立配置（保留原有订阅地址，勿移动/改名）

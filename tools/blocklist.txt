@@ -1,0 +1,90 @@
+# 源黑名单 —— 合并时按 key 直接剔除
+# ---------------------------------------------------------------
+# 用法：每行 `key<TAB>原因`。key 对应 sites[].key，合并脚本 add_sites()
+# 在入表前过滤，因此改了这里重跑 merge_config.py 即生效，无需手改 tvbox.json。
+#
+# 判定依据见 docs/源体检报告.md：
+#   死链   = 阿里/腾讯 DoH + 114DNS + 8.8.8.8 三处解析均为 NXDOMAIN（域名已注销）
+#   重复   = api+ext 完全一致，或同一站点的两种实现/镜像只留其一
+# ---------------------------------------------------------------
+
+# ===== 一、死链：域名已无 DNS 记录 =====
+金蝉采集	死链 zy.jinchancaiji.com
+789采集	死链 zy.jinchancaiji.com（与「金蝉采集」同接口）
+drpy_js_NT动漫	死链 www.ntdm.tv
+drpy_js_369影视	死链 www.cs1369.com
+drpy_js_我爱跟剧	死链 fabu.timiys.vip
+drpy_js_996影视	死链 www.cs1369.com（与 369影视 同域名）
+drpy_js_7喜影院	死链 7xi.tv
+drpy_js_喵次元	死链 cym.zhui.la
+drpy_js_JangoIndex	死链 jango-index.ml
+drpy_js_花屋影院	死链 www.huafun.vip
+drpy_js_徕米TV	死链 www.laimi.me
+drpy_js_美视网	死链 www.mgtv.fun
+drpy_js_免费看	死链 mfkys.com
+drpy_js_欧帝影院	死链 www.odivod.com
+drpy_js_朴樱影视	死链 www.pyys.top
+drpy_js_西瓜影院	死链 www.uccomic.com
+drpy_js_小狗影院	死链 pupvod.com
+快帆	死链 api.kuaifan.tv
+rarbt	死链 www.rarbt.fun
+XBPQ_BaiPiao	死链 www.baipiaoys.com
+apittzy.com	死链 apittzy.com
+api.apilyzy.com	死链 api.apilyzy.com
+忍者	死链 mfxs123.sbs
+彼岸	死链 qjappcms.sun4k.top
+drpy_js_310直播	死链 www.310.tv
+csp_XYQHiker_短剧屋	死链 www.metaysw.com
+drpy_js_清风DJ	死链 www.vvvdj.com
+
+# ===== 二、精确重复：api + ext 完全一致，只留一个 =====
+bb	重复：与「搜索 • 豆瓣」同为 ./js/drpy.js，纯提示性占位
+cc	重复：与「搜索 • 豆瓣」同为 ./js/drpy.js，纯提示性占位
+config	重复：与「配置 • 中心」同为 csp_Config + ./json/config.json
+csp_LocalFile	重复：与「本地 • 视频」同为 csp_LocalFile
+盤搜	重复：与「盘搜 • 搜索」同为 csp_PanSou
+csp_YGP	重复：与「新片 • 预告」同为 csp_YGP
+FirstAid	重复：与「急救 • 教学」同为 csp_FirstAid
+360_spider	重复：与「三六零 • 视频」同为 csp_SP360
+商店	重复：与「應用商店」同为 csp_Market + ./json/market.json
+drpy_js_美剧迷	重复：与「美剧迷[js]」规则文件 md5 相同
+drpy_js_yyets	重复：与「人人搜[js]」规则文件 md5 相同（夸克搜索）
+pgxdy.com	重复：与「黄AV」同为 pgxdy.com/api/xml.php
+csp_New6v	重复：与「New6V • 磁力」同为 csp_New6v
+csp_MeijuMi	重复：与「美剧迷 • 磁力」同为 csp_MeijuMi
+一起	重复：与「一起 • APP」同为 csp_AppYQK
+光鸭网盘	重复：与「光鸭 • 云盘」同为 csp_PanGuangya
+咖啡	重复：与「咖啡 • 体育」同为 csp_SportsKafei
+drpy_js_哔哩直播	重复：与「哔哩直播[js]」规则文件 md5 相同
+DRJS_虎牙	重复：与「直播 | 虎牙[js]」规则文件 md5 相同
+88js	重复：与「体育 | 88看球[js]」规则文件 md5 相同（且为老 drpy）
+
+# ===== 三、同一站点的两种实现 / 镜像：同类型只留其一 =====
+drpy_js_ddys	重复：「低端影视」与「低端[js]」规则文件 md5 完全相同（ddys.pro）
+drpy_js_libvio	重复：「libvio」与「LIBVIO[js]」规则文件 md5 完全相同
+drpy_js_6V新版[磁]	重复：同为 6V，规则 2.2KB 残缺，保留 6.9KB 的「新版6v[js]」
+drpy_js_磁力熊搜索	重复：同为磁力熊，保留功能更全的「磁力 | 磁力熊[js]」
+drpy_js_爱看机器人	重复：同为 ikanbot，规则 5.4KB 旧版，保留「爱看机器人2[js]」
+drpy_js_中国人	重复：同为 chinaqtv.co，保留「中国人线上看[js]」
+drpy_js_映迷影院	重复：同为 inmi.app，保留「映迷[V2]」
+csp_XYQHiker_播视童趣	重复：同为 boosj.com，保留 drpy2 的「少儿 | 童趣[js]」
+drpy_js_私人影院	重复：同为 bei5dy.com，保留「被窝电影[js]」
+drpy_js_思古影视	重复：同为思古影视，保留较新的 [V2]
+drpy_js_爱迪影视	重复：同为爱迪（adys），保留较新的 [V2]
+drpy_js_cokemv[V2]	重复：同为 cokemv，保留规则更全的「cokemv[js]」
+drpy_js_秋霞影院	重复：同为秋霞系，保留规则更全的「秋霞影视[js]」
+索尼	重复：与「率率[直连]」同为 suoniapi.com 同一套数据
+非凡	重复：与「非凡2」同为 ffzy.tv 接口，且为明文 http
+drpy_js_量子资源	重复：与「量子 • 直连」同为量子 cms（lzcaiji/lziapi）
+csp_XYQHiker_河马短剧	重复：同为河马短剧，保留原生 csp_ShortHema
+华谊影视	重复：与「华谊 • APP」同为 123 云盘华谊分享，py 依赖运行时
+drpy_js_落攻阁影视	重复：同为 lggys.com，保留较新的 [V2]
+drpy_js_69美剧[V2]	重复：同为 69mj.com，保留规则更全的「69美剧[js]」
+drpy_js_鑫鑫[V2]	重复：同为 yingszj 采集站，保留「影视之家[V2][js]」
+drpy_js_玄天	重复：同为 m.7caa.com，保留「悠久影院[js]」
+爱看机器人	重复：与「爱看」同为 csp_Ikanbot，且该条 ext 为空
+# 注：csp_Bili 下的「哔哩」与「哔哩 • 合集」分类配置不同（前者带帕梅拉/太极拳等自选分区），
+#     不算重复，两者都留。
+
+# ===== 四、待观察（暂不删，仅记录）=====
+# spider_厂长资源	www.czys.top 无 A 记录（NODATA），域名仍在但取不到地址

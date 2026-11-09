@@ -178,6 +178,17 @@ def ext_broken(site):
     return False
 
 
+# 黑名单：tools/blocklist.txt 里登记的 key 一律不入表（死链 / 重复源）。
+BLOCK_PATH = os.path.join(ROOT, "tools", "blocklist.txt")
+BLOCK = set()
+if os.path.isfile(BLOCK_PATH):
+    for line in open(BLOCK_PATH, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        BLOCK.add(line.split("\t")[0].split()[0])
+print(f"黑名单：{len(BLOCK)} 条（{os.path.relpath(BLOCK_PATH, ROOT)}）")
+
 kept, dropped = [], []
 keys, names = set(), set()
 norms = set()                      # 归一化名称，跨配置语义去重
@@ -219,11 +230,14 @@ def add_sites(src_name, sites, allow_csp=False, forbid_csp=False, cross_dedup=Fa
         if k in keys:
             stat[f"{src_name}:key重复"] += 1
             continue
+        if k in BLOCK:
+            stat[f"{src_name}:黑名单"] += 1
+            continue
         if nm in names:
             stat[f"{src_name}:name重复"] += 1
             continue
         nn = norm_name(nm)
-        ext_s = str(s.get("ext") or "")
+        ext_s = json.dumps(s["ext"], sort_keys=True, ensure_ascii=False) if isinstance(s.get("ext"), (dict, list)) else str(s.get("ext") or "")
         pair = (api, ext_s)
         if cross_dedup:
             if nn and nn in norms:

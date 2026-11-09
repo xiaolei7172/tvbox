@@ -1,0 +1,5682 @@
+[
+ {
+  "key": "drpy_js_豆瓣",
+  "name": "搜索 • 豆瓣",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "frodo.douban.com HTTP200 5287B",
+  "candidates": [
+   "frodo.douban.com",
+   "www.doubanapi.com",
+   "api.douban.com",
+   "servicewechat.com"
+  ]
+ },
+ {
+  "key": "配置中心",
+  "name": "配置 • 中心",
+  "type": 3,
+  "api": "csp_Config",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "本地",
+  "name": "本地 • 视频",
+  "type": 3,
+  "api": "csp_LocalFile",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "觅盘",
+  "name": "觅盘 • 搜索",
+  "type": 3,
+  "api": "csp_MiPan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "盘搜",
+  "name": "盘搜 • 搜索",
+  "type": 3,
+  "api": "csp_PanSou",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "酷乐",
+  "name": "酷乐 • 搜索",
+  "type": 3,
+  "api": "csp_KuLe",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "百酷",
+  "name": "百酷 • 搜索",
+  "type": 3,
+  "api": "csp_Baiku",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "趣盘",
+  "name": "趣盘 • 搜索",
+  "type": 3,
+  "api": "csp_QuPanSo",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "bb",
+  "name": "配置接口完全免费",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "frodo.douban.com HTTP200 5287B",
+  "candidates": [
+   "frodo.douban.com",
+   "www.doubanapi.com",
+   "api.douban.com",
+   "servicewechat.com"
+  ]
+ },
+ {
+  "key": "drpy_js_磁力熊搜索",
+  "name": "搜索 | 磁力熊[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.cilixiong.com:无响应",
+  "candidates": [
+   "www.cilixiong.com"
+  ]
+ },
+ {
+  "key": "lf_js_search",
+  "name": "搜索 | 路飞[js]",
+  "type": 3,
+  "api": "./lib/lf_search3_min.js",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_LocalFile",
+  "name": "💻本地视频",
+  "type": 3,
+  "api": "csp_LocalFile",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "config",
+  "name": "🚀辅助┃配置┃中心",
+  "type": 3,
+  "api": "csp_Config",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "鬼鬼",
+  "name": "🔍鬼鬼｜网盘搜索",
+  "type": 3,
+  "api": "csp_GuiGui",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "预告",
+  "name": "新片 • 预告",
+  "type": 3,
+  "api": "csp_YGP",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "新闪雷",
+  "name": "新闪雷 • MP4",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "fyyy",
+  "name": "飞宇影院",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "ntfeiyu.com HTTP200 81358B",
+  "candidates": [
+   "ntfeiyu.com"
+  ]
+ },
+ {
+  "key": "cupfox_in",
+  "name": "茶杯狐 • cupfox.in",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.cupfox.in HTTP200 196939B",
+  "candidates": [
+   "www.cupfox.in"
+  ]
+ },
+ {
+  "key": "italkbbtv",
+  "name": "ITalkBB • 外",
+  "type": 3,
+  "api": "./py/ITalkBBTV.py",
+  "verdict": "alive",
+  "detail": "www.italkbbtv.com HTTP200 340636B",
+  "candidates": [
+   "www.italkbbtv.com",
+   "api.italkbbtv.com"
+  ]
+ },
+ {
+  "key": "OleLive",
+  "name": "欧乐影院 • 外",
+  "type": 3,
+  "api": "./py/OleLive.py",
+  "verdict": "alive",
+  "detail": "olelive.com HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "olelive.com",
+   "api.olelive.com",
+   "static.olelive.com"
+  ]
+ },
+ {
+  "key": "华数",
+  "name": "华数 • 影视",
+  "type": 3,
+  "api": "./py/华数.py",
+  "verdict": "alive",
+  "detail": "www.wasu.cn HTTP200 642B",
+  "candidates": [
+   "www.wasu.cn",
+   "ups.5g.wasu.tv",
+   "mcspapp.5g.wasu.tv"
+  ]
+ },
+ {
+  "key": "华谊影视",
+  "name": "华谊 • 影视",
+  "type": 3,
+  "api": "./py/华谊影视.py",
+  "verdict": "alive",
+  "detail": "1851089669.cdn.123clouddisk.com HTTP200 1056B",
+  "candidates": [
+   "1851089669.cdn.123clouddisk.com",
+   "vip.123pan.cn"
+  ]
+ },
+ {
+  "key": "Didahd",
+  "name": "嘀嗒影视",
+  "type": 3,
+  "api": "./py/Didahd.py",
+  "verdict": "alive",
+  "detail": "hd.ticktockwow.com HTTP200 3661B",
+  "candidates": [
+   "hd.ticktockwow.com",
+   "www.didahd.xyz"
+  ]
+ },
+ {
+  "key": "TVB云播",
+  "name": "TVB云播",
+  "type": 3,
+  "api": "./py/TVB云播.py",
+  "verdict": "alive",
+  "detail": "app.tuxianimg.com HTTP200 7017B",
+  "candidates": [
+   "app.tuxianimg.com"
+  ]
+ },
+ {
+  "key": "哔哩合集",
+  "name": "哔哩 • 合集",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩视频",
+  "name": "哔哩 • 视频",
+  "type": 3,
+  "api": "csp_BiliYS",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "玩偶",
+  "name": "玩偶 • 4K",
+  "type": 3,
+  "api": "csp_Wogg",
+  "verdict": "alive",
+  "detail": "www.wogg.live HTTP200 569991B",
+  "candidates": [
+   "www.wogg.live",
+   "woggpan.888484.xyz",
+   "wogg.xxooo.cf",
+   "woggpan.xxooo.cf"
+  ]
+ },
+ {
+  "key": "快映",
+  "name": "快映 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "xsayang.fun HTTP200 572413B",
+  "candidates": [
+   "xsayang.fun"
+  ]
+ },
+ {
+  "key": "木偶",
+  "name": "木偶 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "123.666291.xyz HTTP200 654737B",
+  "candidates": [
+   "123.666291.xyz",
+   "666.666291.xyz",
+   "www.muou.site",
+   "www.muou.asia"
+  ]
+ },
+ {
+  "key": "闪电",
+  "name": "闪电 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "shandian.blog HTTP200 510212B",
+  "candidates": [
+   "shandian.blog"
+  ]
+ },
+ {
+  "key": "蜡笔",
+  "name": "蜡笔 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "www.fmcf.fun HTTP200 650907B",
+  "candidates": [
+   "www.fmcf.fun",
+   "www.mmpanpan.site",
+   "tvpanpan.site",
+   "www.tvpanpan.site"
+  ]
+ },
+ {
+  "key": "多多",
+  "name": "多多 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "tv.yydsys.top HTTP200 570832B",
+  "candidates": [
+   "tv.yydsys.top",
+   "tv.yydsys.cc",
+   "tv.214521.xyz"
+  ]
+ },
+ {
+  "key": "八零",
+  "name": "八零 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "woog.nxog.eu.org HTTP200 408783B",
+  "candidates": [
+   "woog.nxog.eu.org",
+   "ogkk.nxog.eu.org",
+   "woog.430520.xyz"
+  ]
+ },
+ {
+  "key": "虎斑",
+  "name": "虎斑 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "xhban.xyz HTTP200 573920B",
+  "candidates": [
+   "xhban.xyz"
+  ]
+ },
+ {
+  "key": "花卷",
+  "name": "花卷 • 4K",
+  "type": 3,
+  "api": "csp_PanWebShareHJ",
+  "verdict": "alive",
+  "detail": "www.hjzhencai.top HTTP200 20450B",
+  "candidates": [
+   "www.hjzhencai.top",
+   "www.huanjuanwp.shop"
+  ]
+ },
+ {
+  "key": "搬运",
+  "name": "搬运 • 4K",
+  "type": 3,
+  "api": "csp_BanYunDao",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "指南",
+  "name": "指南 • 4K",
+  "type": 3,
+  "api": "csp_4KZhinan",
+  "verdict": "alive",
+  "detail": "4kzn.cc HTTP200 121694B",
+  "candidates": [
+   "4kzn.cc"
+  ]
+ },
+ {
+  "key": "小丑",
+  "name": "小丑 • 4K",
+  "type": 3,
+  "api": "csp_4KZhinan",
+  "verdict": "alive",
+  "detail": "4kxc.com HTTP200 118956B",
+  "candidates": [
+   "4kxc.com"
+  ]
+ },
+ {
+  "key": "茉莉",
+  "name": "茉莉 • 4K",
+  "type": 3,
+  "api": "csp_HDmoli",
+  "verdict": "alive",
+  "detail": "www.hdmoli.com HTTP200 43518B",
+  "candidates": [
+   "www.hdmoli.com",
+   "www.hdmoli.pro"
+  ]
+ },
+ {
+  "key": "爱盼",
+  "name": "爱盼 • 4K",
+  "type": 3,
+  "api": "csp_AiPan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "移动",
+  "name": "移动 • 4K",
+  "type": 3,
+  "api": "csp_Yidong4K",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "即刻",
+  "name": "即刻 • 4K",
+  "type": 3,
+  "api": "csp_Jike",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "双星",
+  "name": "双星 • 4K",
+  "type": 3,
+  "api": "csp_ShuangXing",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "卡卡",
+  "name": "卡卡 • 4K",
+  "type": 3,
+  "api": "csp_KKPan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "星辰影视",
+  "name": "星辰 • 影视",
+  "type": 3,
+  "api": "csp_XingChen",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "飞娱影视",
+  "name": "飞娱 • 影视",
+  "type": 3,
+  "api": "csp_Feiyu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "旺旺影视",
+  "name": "旺旺 • 影视",
+  "type": 3,
+  "api": "csp_Wwys",
+  "verdict": "dead",
+  "detail": "vip.wwgz.cn:HTTP404",
+  "candidates": [
+   "vip.wwgz.cn"
+  ]
+ },
+ {
+  "key": "独播影视",
+  "name": "独播 • 影视",
+  "type": 3,
+  "api": "csp_Duboku",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "瓜子影视",
+  "name": "瓜子 • 影视",
+  "type": 3,
+  "api": "csp_Gz360",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "厂长影视",
+  "name": "厂长 • 影视",
+  "type": 3,
+  "api": "csp_Czsapp",
+  "verdict": "alive",
+  "detail": "cz01.vip HTTP200 2355B",
+  "candidates": [
+   "cz01.vip"
+  ]
+ },
+ {
+  "key": "金牌影视",
+  "name": "金牌 • 影视",
+  "type": 3,
+  "api": "csp_Jpys",
+  "verdict": "alive",
+  "detail": "y2s52n7.com HTTP200 393785B",
+  "candidates": [
+   "y2s52n7.com",
+   "m.hkybqufgh.com",
+   "m.sizhengxt.com",
+   "m.9zhoukj.com",
+   "m.jiabaide.cn"
+  ]
+ },
+ {
+  "key": "骚火影视",
+  "name": "骚火 • 影视",
+  "type": 3,
+  "api": "csp_SaoHuo",
+  "verdict": "dead",
+  "detail": "shdy5.us:HTTP522",
+  "candidates": [
+   "shdy5.us"
+  ]
+ },
+ {
+  "key": "枫叶影视",
+  "name": "枫叶 • 影视",
+  "type": 3,
+  "api": "csp_FengYe",
+  "verdict": "alive",
+  "detail": "www.vip1949.com HTTP200 10571B",
+  "candidates": [
+   "www.vip1949.com"
+  ]
+ },
+ {
+  "key": "爱看机器人",
+  "name": "爱看 • 影视",
+  "type": 3,
+  "api": "csp_Ikanbot",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "1905",
+  "name": "1905 • 影视",
+  "type": 3,
+  "api": "csp_Web1905",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "番社动漫",
+  "name": "番社 • 动漫",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "dora.xiaoxinbk.com HTTP200 989B",
+  "candidates": [
+   "dora.xiaoxinbk.com",
+   "www.dora-video.cn"
+  ]
+ },
+ {
+  "key": "赏月",
+  "name": "赏月 • 动漫",
+  "type": 3,
+  "api": "csp_AnimeTsukimi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "稀饭",
+  "name": "稀饭 • 动漫",
+  "type": 3,
+  "api": "csp_AnimeXifan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "巴士动漫",
+  "name": "巴士 • 动漫",
+  "type": 3,
+  "api": "csp_AnimeBashi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "吉里动漫",
+  "name": "吉里 • 动漫",
+  "type": 3,
+  "api": "csp_AnimeGiri",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "花子动漫",
+  "name": "花子 • 动漫",
+  "type": 3,
+  "api": "csp_AnimeHuazi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "呦呦DJ",
+  "name": "呦呦 • DJ",
+  "type": 3,
+  "api": "csp_Djuu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "蜻蜓FM",
+  "name": "蜻蜓 • FM",
+  "type": 3,
+  "api": "csp_QingtingFM",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "童趣",
+  "name": "童趣 • 儿童",
+  "type": 3,
+  "api": "csp_TongQu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "兔小贝",
+  "name": "兔小贝 • 儿童",
+  "type": 3,
+  "api": "csp_TuXiaoBei",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "贝乐虎",
+  "name": "贝乐虎 • 儿童",
+  "type": 3,
+  "api": "csp_BeiLeHu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩哔哩小品",
+  "name": "哔哩 • 小品",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "少儿教育",
+  "name": "少儿 • 教育",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "小学课堂",
+  "name": "小学 • 课堂",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "初中课堂",
+  "name": "初中 • 课堂",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "高中课堂",
+  "name": "高中 • 课堂",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "急救教学",
+  "name": "急救 • 教学",
+  "type": 3,
+  "api": "csp_FirstAid",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "养生堂",
+  "name": "养生 • 知识",
+  "type": 3,
+  "api": "csp_YST",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "电影天堂",
+  "name": "影视 • 电影天堂",
+  "type": 1,
+  "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "http://caiji.dyttzyapi.com/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "天涯采集",
+  "name": "影视 • 天涯",
+  "type": 1,
+  "api": "http://tyyszy.com/api.php/provide/vod",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "http://tyyszy.com/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "量子",
+  "name": "影视 • 量子[直连]",
+  "type": 1,
+  "api": "https://cj.lziapi.com/api.php/provide/vod/",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://cj.lziapi.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "非凡",
+  "name": "影视 • 非凡[直连]",
+  "type": 1,
+  "api": "http://ffzy.tv/api.php/provide/vod/",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "http://ffzy.tv/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "索尼",
+  "name": "影视 • 索尼[直连]",
+  "type": 0,
+  "api": "https://suoniapi.com/api.php/provide/vod/at/xml/",
+  "verdict": "alive",
+  "detail": "CMS-XML 5008B",
+  "candidates": [
+   "https://suoniapi.com/api.php/provide/vod/at/xml/"
+  ]
+ },
+ {
+  "key": "卧龙资源",
+  "name": "影视 • 卧龙资源[直连]",
+  "type": 1,
+  "api": "https://wolongzyw.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='wolongzyw.com', port=443): Max retries excee | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='wolongzyw.com', port=443): Max retries excee]；首页:无响应",
+  "candidates": [
+   "https://wolongzyw.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "U酷资源風",
+  "name": "影视 • 尤酷[直连]",
+  "type": 1,
+  "api": "https://api.ukuapi.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='api.ukuapi.com', port=443): Max retries exce | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='api.ukuapi.com', port=443): Max retries exce]；首页:无响应",
+  "candidates": [
+   "https://api.ukuapi.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "极速资源",
+  "name": "影视 • 极速[直连]",
+  "type": 1,
+  "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://jszyapi.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "建安采集",
+  "name": "影视 • 建安",
+  "type": 1,
+  "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
+  ]
+ },
+ {
+  "key": "金蝉采集",
+  "name": "影视 • 金蝉",
+  "type": 1,
+  "api": "https://zy.jinchancaiji.com/api.php/provide/vod",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='zy.jinchancaiji.com', port=443): Max retries | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='zy.jinchancaiji.com', port=443): Max retries]；首页:无响应",
+  "candidates": [
+   "https://zy.jinchancaiji.com/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "小绵阳采集",
+  "name": "影视 • 小绵阳",
+  "type": 1,
+  "api": "https://vs.okcdn100.top/api.php/provide/vod",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:HTTP404 | ac=detail&wd=%E6%B5%8B%E8%AF%95:HTTP404]；首页:HTTP200 1036B",
+  "candidates": [
+   "https://vs.okcdn100.top/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "789采集",
+  "name": "789采集",
+  "type": 1,
+  "api": "https://zy.jinchancaiji.com/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='zy.jinchancaiji.com', port=443): Max retries | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='zy.jinchancaiji.com', port=443): Max retries]；首页:无响应",
+  "candidates": [
+   "https://zy.jinchancaiji.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "率率",
+  "name": "影视 • 率率[直连]",
+  "type": 1,
+  "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://suoniapi.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "暴風",
+  "name": "影视 • 暴風[直连]",
+  "type": 1,
+  "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://bfzyapi.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "Ncat",
+  "name": "网飞猫",
+  "type": 3,
+  "api": "./py/Ncat.py",
+  "verdict": "dead",
+  "detail": "www.ncat25.com:HTTP850; www.ncat1.app:HTTP850; vf.esadj.com:HTTP502",
+  "candidates": [
+   "www.ncat25.com",
+   "www.ncat1.app",
+   "vf.esadj.com",
+   "vres.cyscyy.com",
+   "vres.enbymae.com",
+   "vres.zyxpedu.com"
+  ]
+ },
+ {
+  "key": "drpy_js_360影视",
+  "name": "官源 • 360",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.360kan.com HTTP200 1749B",
+  "candidates": [
+   "www.360kan.com",
+   "api.web.360kan.com",
+   "api.so.360kan.com",
+   "cache.json.icu"
+  ]
+ },
+ {
+  "key": "drpy_js_百忙无果",
+  "name": "官源 • 芒果",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "pianku.api.mgtv.com:HTTP404; mobileso.bz.mgtv.com:响应过短23B; pcweb.api.mgtv.com:响应过短61B",
+  "candidates": [
+   "pianku.api.mgtv.com",
+   "mobileso.bz.mgtv.com",
+   "pcweb.api.mgtv.com",
+   "www.mgtv.com"
+  ]
+ },
+ {
+  "key": "drpy_js_腾云驾雾",
+  "name": "官源 • 腾讯",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "v.qq.com HTTP200 142051B",
+  "candidates": [
+   "v.qq.com",
+   "node.video.qq.com",
+   "pbaccess.video.qq.com",
+   "s.video.qq.com",
+   "union.video.qq.com"
+  ]
+ },
+ {
+  "key": "drpy_js_奇珍异兽",
+  "name": "官源 • 爱奇艺",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.iqiyi.com HTTP200 63637B",
+  "candidates": [
+   "www.iqiyi.com",
+   "pcw-api.iqiyi.com",
+   "search.video.iqiyi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_菜狗",
+  "name": "官源 • 搜狗",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "waptv.sogou.com HTTP200 7650B",
+  "candidates": [
+   "waptv.sogou.com",
+   "v.sogou.com"
+  ]
+ },
+ {
+  "key": "drpy_js_优酷",
+  "name": "官源 • 优酷",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.youku.com HTTP200 223125B",
+  "candidates": [
+   "www.youku.com",
+   "search.youku.com",
+   "v.youku.com"
+  ]
+ },
+ {
+  "key": "drpy_js_Anime1动畫",
+  "name": "动漫 • Anime1动畫",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "anime1.me HTTP200 26157B",
+  "candidates": [
+   "anime1.me",
+   "v.anime1.me",
+   "sta.anicdn.com"
+  ]
+ },
+ {
+  "key": "drpy_js_NT动漫",
+  "name": "动漫 • NT动漫",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ntdm.tv:HTTP502; www.ntdm8.com:HTTP502",
+  "candidates": [
+   "www.ntdm.tv",
+   "www.ntdm8.com"
+  ]
+ },
+ {
+  "key": "drpy_js_路漫漫",
+  "name": "动漫 • 路漫漫",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.lmm85.com HTTP200 101422B",
+  "candidates": [
+   "www.lmm85.com",
+   "yun.366day.site"
+  ]
+ },
+ {
+  "key": "drpy_js_去看吧",
+  "name": "动漫 • 去看吧",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "qkan8.com HTTP200 67662B",
+  "candidates": [
+   "qkan8.com"
+  ]
+ },
+ {
+  "key": "drpy_js_播客",
+  "name": "聚合 • 播客",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "getpodcast.xyz HTTP200 272064B",
+  "candidates": [
+   "getpodcast.xyz"
+  ]
+ },
+ {
+  "key": "drpy_js_酷6网",
+  "name": "聚合 • 酷6网",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ku6.com HTTP200 93854B",
+  "candidates": [
+   "www.ku6.com",
+   "news-stream.lsttnews.com"
+  ]
+ },
+ {
+  "key": "drpy_js_网易公版影像",
+  "name": "聚合 • 网易公版",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "active.163.com:HTTP404; so.v.163.com:HTTP404",
+  "candidates": [
+   "active.163.com",
+   "so.v.163.com"
+  ]
+ },
+ {
+  "key": "push_agent",
+  "name": "手机｜推送",
+  "type": 3,
+  "api": "csp_Push",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "cc",
+  "name": "请勿相信视频中任何广告",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "frodo.douban.com HTTP200 5287B",
+  "candidates": [
+   "frodo.douban.com",
+   "www.doubanapi.com",
+   "api.douban.com",
+   "servicewechat.com"
+  ]
+ },
+ {
+  "key": "闪雷",
+  "name": "闪雷 • MP4",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "豆瓣",
+  "name": "豆瓣 • 首页",
+  "type": 3,
+  "api": "csp_Douban",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "三六零",
+  "name": "三六零 • 视频",
+  "type": 3,
+  "api": "csp_SP360",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_荐片",
+  "name": "影视 | 荐片[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api2.rinhome.com HTTP200 9091B",
+  "candidates": [
+   "api2.rinhome.com"
+  ]
+ },
+ {
+  "key": "Youtube",
+  "name": "视频 | Youtube[jar]",
+  "type": 3,
+  "api": "csp_Youtube",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "FirstAid",
+  "name": "科普 | 急救[jar]",
+  "type": 3,
+  "api": "csp_FirstAid",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "Wogg",
+  "name": "弹幕 | 玩偶[jar]",
+  "type": 3,
+  "api": "csp_Wogg",
+  "verdict": "alive",
+  "detail": "www.wogg.net HTTP200 569991B",
+  "candidates": [
+   "www.wogg.net"
+  ]
+ },
+ {
+  "key": "drpy_js_酷云77",
+  "name": "影视 | 酷云77[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api.tyun77.cn HTTP200 16780B",
+  "candidates": [
+   "api.tyun77.cn",
+   "www.bilibili.com",
+   "www.ixigua.com"
+  ]
+ },
+ {
+  "key": "drpy_js_快看",
+  "name": "影视 | 快看[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kuaikanys.net HTTP200 20382B",
+  "candidates": [
+   "www.kuaikanys.net"
+  ]
+ },
+ {
+  "key": "drpy_js_爱看",
+  "name": "影视 | 爱看[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "aikanys.vip HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "akanhd.com",
+   "aikanys.vip"
+  ]
+ },
+ {
+  "key": "drpy_js_低端",
+  "name": "影视 | 低端[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "ddys.site HTTP200 63064B",
+  "candidates": [
+   "v.ddys.pro",
+   "ddys.pro",
+   "ddys.site",
+   "ddys.wiki",
+   "ddys.mov",
+   "ddys.tv",
+   "w.ddys.pro"
+  ]
+ },
+ {
+  "key": "drpy_js_南瓜影视",
+  "name": "影视 | 南瓜影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "ys.changmengyun.com HTTP200 16783B",
+  "candidates": [
+   "ys.changmengyun.com"
+  ]
+ },
+ {
+  "key": "drpy_js_Auete",
+  "name": "影视 | Auete[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "auete.site:HTTP502; haozhansou.com:无响应",
+  "candidates": [
+   "auete.site",
+   "haozhansou.com"
+  ]
+ },
+ {
+  "key": "drpy_js_cokemv",
+  "name": "影视 | cokemv[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.cokemv.fun HTTP200 5568B",
+  "candidates": [
+   "www.cokemv.fun"
+  ]
+ },
+ {
+  "key": "drpy_js_LIBVIO",
+  "name": "影视 | LIBVIO[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "libvio.app HTTP200 22140B",
+  "candidates": [
+   "libvio.app",
+   "tv.libvio.cc",
+   "libvio.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_voflix",
+  "name": "影视 | voflix[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.voflix.me HTTP200 5536B",
+  "candidates": [
+   "www.voflix.me"
+  ]
+ },
+ {
+  "key": "drpy_js_量子影视",
+  "name": "影视 | 量子影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.lzizy9.com:HTTP502",
+  "candidates": [
+   "www.lzizy9.com"
+  ]
+ },
+ {
+  "key": "drpy_js_农民",
+  "name": "影视 | 农民影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.nmdvd.com HTTP200 2191B",
+  "candidates": [
+   "www.nmdvd.com",
+   "www.nmddd.com",
+   "vip.wwgz.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_在线之家",
+  "name": "影视 | 在线之家[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.zxzj.site HTTP200 5564B",
+  "candidates": [
+   "www.zxzj.site",
+   "www.zxzja.com"
+  ]
+ },
+ {
+  "key": "drpy_js_量子资源",
+  "name": "影视 | 量子资源[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "cj.lzcaiji.com:无响应",
+  "candidates": [
+   "cj.lzcaiji.com"
+  ]
+ },
+ {
+  "key": "drpy_js_369影视",
+  "name": "影视 | 369影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.cs1369.com:HTTP502",
+  "candidates": [
+   "www.cs1369.com"
+  ]
+ },
+ {
+  "key": "drpy_js_热播库",
+  "name": "影视 | 热播库[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.reboku.cc HTTP409 7786B",
+  "candidates": [
+   "www.reboku.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_蛋蛋剧",
+  "name": "影视 | 蛋蛋剧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dandanju.vip HTTP200 7212B",
+  "candidates": [
+   "www.dandanju.vip",
+   "www.dandanju.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_B站影视",
+  "name": "影视 | B站影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "bzhanys.com:HTTP502; bzhanyy.com:无响应",
+  "candidates": [
+   "bzhanys.com",
+   "bzhanyy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_凌云影视",
+  "name": "影视 | 凌云影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.lyys8.com HTTP200 5536B",
+  "candidates": [
+   "www.lingyun.in",
+   "www.lyys8.com",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_孜然影视",
+  "name": "影视 | 孜然影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "zrys1.top HTTP200 11876B",
+  "candidates": [
+   "zrys1.top"
+  ]
+ },
+ {
+  "key": "drpy_js_我爱跟剧",
+  "name": "影视 | 我爱跟剧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "fabu.timiys.vip:HTTP502",
+  "candidates": [
+   "fabu.timiys.vip"
+  ]
+ },
+ {
+  "key": "drpy_js_干饭影视",
+  "name": "影视 | 干饭影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "gfys.top:HTTP502; gfysys.com:无响应",
+  "candidates": [
+   "gfys.top",
+   "gfysys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_秋霞影视",
+  "name": "影视 | 秋霞影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.qiuxia360.com HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.qiuxia360.com"
+  ]
+ },
+ {
+  "key": "drpy_js_阿布影院",
+  "name": "影视 | 阿布影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.777jiexi.com HTTP200 5544B",
+  "candidates": [
+   "abu22.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_电影先生",
+  "name": "影视 | 电影先生[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "dyxs.me HTTP200 5865B",
+  "candidates": [
+   "dyxs.me",
+   "dyxs.de",
+   "dianying.in",
+   "DianYingim.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_落攻阁影视",
+  "name": "影视 | 落攻阁影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.lggys.com:响应过短114B",
+  "candidates": [
+   "www.lggys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_69美剧",
+  "name": "影视 | 69美剧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.69mj.com HTTP200 44135B",
+  "candidates": [
+   "www.69mj.com"
+  ]
+ },
+ {
+  "key": "drpy_js_兄弟影视",
+  "name": "影视 | 兄弟影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.brovod.com HTTP200 136678B",
+  "candidates": [
+   "www.brovod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_4k剧院",
+  "name": "影视 | 4k剧院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "4k4k.live:HTTP502",
+  "candidates": [
+   "4k4k.live"
+  ]
+ },
+ {
+  "key": "drpy_js_爱迪影视",
+  "name": "影视 | 爱迪影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "adys123.com HTTP200 2191B",
+  "candidates": [
+   "adys.tv",
+   "adys123.com",
+   "aidi.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_539影视",
+  "name": "影视 | 539影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "539539.xyz:无响应",
+  "candidates": [
+   "539539.xyz"
+  ]
+ },
+ {
+  "key": "drpy_js_333影视",
+  "name": "影视 | 333影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ylwt33.com HTTP200 1771B",
+  "candidates": [
+   "www.ylwt33.com",
+   "www.333ys.me"
+  ]
+ },
+ {
+  "key": "drpy_js_996影视",
+  "name": "影视 | 996影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.cs1369.com:HTTP502",
+  "candidates": [
+   "www.cs1369.com"
+  ]
+ },
+ {
+  "key": "drpy_js_188影视",
+  "name": "影视 | 188影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "188kan.com HTTP409 7777B",
+  "candidates": [
+   "188kan.com",
+   "www.7k789.com"
+  ]
+ },
+ {
+  "key": "drpy_js_哔嘀影视",
+  "name": "影视 | 哔嘀影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.bdys.me HTTP200 5532B",
+  "candidates": [
+   "www.bdys.me",
+   "www.bdys10.com"
+  ]
+ },
+ {
+  "key": "drpy_js_7喜影院",
+  "name": "影视 | 7喜影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "7xi.tv HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "7xi.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_18哈",
+  "name": "影视 | 18哈[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "sk100.tv HTTP200 19804B",
+  "candidates": [
+   "sk100.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_567电影院",
+  "name": "影视 | 567电影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.345kp.com HTTP200 2191B",
+  "candidates": [
+   "www.345kp.com",
+   "www.567dyy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_Fun4K",
+  "name": "影视 | Fun4K[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.fun4k.com HTTP409 7786B",
+  "candidates": [
+   "www.fun4k.com"
+  ]
+ },
+ {
+  "key": "drpy_js_KOK影院",
+  "name": "影视 | KOK影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kokyy.com HTTP409 7786B",
+  "candidates": [
+   "www.kokyy.com",
+   "www.pzjzyy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_TVB云播",
+  "name": "影视 | TVB云播[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.viptv01.com HTTP200 7017B",
+  "candidates": [
+   "www.viptv01.com"
+  ]
+ },
+ {
+  "key": "drpy_js_UrleBird[飞]",
+  "name": "影视 | UrleBird[飞][js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "urlebird.com:无响应",
+  "candidates": [
+   "urlebird.com"
+  ]
+ },
+ {
+  "key": "drpy_js_爱看影院",
+  "name": "影视 | 爱看影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "ikyy.tv HTTP200 11874B",
+  "candidates": [
+   "ikyy.app",
+   "ikyy.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_北川影视",
+  "name": "影视 | 北川影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "www.bcyingshi.ink",
+   "bczhuiju.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_尘落影视",
+  "name": "影视 | 尘落影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.chenluo.wang HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.chenluo.wang",
+   "jx.xmflv.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_达达龟",
+  "name": "影视 | 达达龟[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dadagui.me HTTP200 7212B",
+  "candidates": [
+   "www.dadagui.me"
+  ]
+ },
+ {
+  "key": "drpy_js_蛋蛋赞",
+  "name": "影视 | 蛋蛋赞[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ddzvod.com HTTP200 476B",
+  "candidates": [
+   "www.ddzvod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_多瑙影视",
+  "name": "影视 | 多瑙影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.duonaovod.com:无响应",
+  "candidates": [
+   "www.duonaovod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_剧迷su",
+  "name": "影视 | 剧迷su[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "gimy.su HTTP200 5556B",
+  "candidates": [
+   "gimy.su"
+  ]
+ },
+ {
+  "key": "drpy_js_看韩剧",
+  "name": "影视 | 看韩剧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kan.cc HTTP200 108662B",
+  "candidates": [
+   "www.kan.cc",
+   "www.kangii.com",
+   "cc.kan.cc",
+   "jiexi.ddmz6.com"
+  ]
+ },
+ {
+  "key": "drpy_js_看了么",
+  "name": "影视 | 看了么[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ksksl.com HTTP200 153861B",
+  "candidates": [
+   "www.ksksl.com"
+  ]
+ },
+ {
+  "key": "drpy_js_蓝光影院",
+  "name": "影视 | 蓝光影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.lgyy.vip:无响应",
+  "candidates": [
+   "www.lgyy.vip"
+  ]
+ },
+ {
+  "key": "drpy_js_首播影院",
+  "name": "影视 | 首播影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.23zhui.com:HTTP502",
+  "candidates": [
+   "www.23zhui.com"
+  ]
+ },
+ {
+  "key": "drpy_js_小白菜电影",
+  "name": "影视 | 小白菜电影[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.xbcdy.com HTTP200 5548B",
+  "candidates": [
+   "www.xbcdy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_影视工场",
+  "name": "影视 | 影视工场[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ysgc.fun:停放/停运页",
+  "candidates": [
+   "www.ysgc.fun"
+  ]
+ },
+ {
+  "key": "drpy_js_影视之家[V2]",
+  "name": "影视 | 影视之家[V2][js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "yingszj.xn--654a.cc",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_悠久影院",
+  "name": "影视 | 悠久影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "m.7caa.com HTTP409 7777B",
+  "candidates": [
+   "m.7caa.com"
+  ]
+ },
+ {
+  "key": "drpy_js_中国人线上看",
+  "name": "影视 | 中国人线上看[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "chinaqtv.co:无响应",
+  "candidates": [
+   "chinaqtv.co"
+  ]
+ },
+ {
+  "key": "drpy_js_555电影",
+  "name": "影视 | 555电影",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.555dyy.top HTTP200 43262B",
+  "candidates": [
+   "www.555dyy.top",
+   "www.555k02.com"
+  ]
+ },
+ {
+  "key": "drpy_js_69美剧[V2]",
+  "name": "影视 | 69美剧[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.69mj.com HTTP200 44135B",
+  "candidates": [
+   "www.69mj.com"
+  ]
+ },
+ {
+  "key": "drpy_js_cokemv[V2]",
+  "name": "影视 | cokemv[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "cokemv.co",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_UM电影[V2]",
+  "name": "影视 | UM电影[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.umkan.cc HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.umkan.cc",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_爱迪[V2]",
+  "name": "影视 | 爱迪[V2][js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "api123.adys.app",
+   "adys.tv",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_宝片[V2]",
+  "name": "影视 | 宝片[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "zpsps.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_刺桐[V2]",
+  "name": "影视 | 刺桐[V2][js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "cms.cttv.vip",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_咕噜[V2]",
+  "name": "影视 | 咕噜[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "w.996w.top HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "w.996w.top",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_吼吼[V2]",
+  "name": "影视 | 吼吼[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "hoho.tv",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_曲奇影视[V2]",
+  "name": "影视 | 曲奇影视[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "1234567.weixiaolove.cn",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_影探[V2]",
+  "name": "影视 | 影探[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "ytcms.lyyytv.cn HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "ytcms.lyyytv.cn",
+   "vipcms.lyyytv.cn",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_北极狐[V2]",
+  "name": "影视 | 北极狐[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kuin.one HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.kuin.one",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_奈飞狗[V2]",
+  "name": "影视 | 奈飞狗[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "netflixdog.club HTTP200 5548B",
+  "candidates": [
+   "netflixdog.club",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_思古影视[V2]",
+  "name": "影视 | 思古影视[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "siguyy.cc",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_映迷[V2]",
+  "name": "影视 | 映迷[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "www.inmi.app",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_美益达[V2]",
+  "name": "影视 | 美益达[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.myd666.tv HTTP200 5536B",
+  "candidates": [
+   "www.myd666.tv",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_落攻阁影视[V2]",
+  "name": "影视 | 落攻阁影视[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "www.lggys.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_路人甲[V2]",
+  "name": "影视 | 路人甲[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "dytt996.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_鑫鑫[V2]",
+  "name": "影视 | 鑫鑫[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.xmflv.com HTTP200 3201B",
+  "candidates": [
+   "yingszj.xn--654a.cc",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_ddys",
+  "name": "影视 | 低端影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "ddys.site HTTP200 51636B",
+  "candidates": [
+   "v.ddys.pro",
+   "ddys.pro",
+   "ddys.site",
+   "ddys.wiki",
+   "ddys.mov",
+   "ddys.tv",
+   "w.ddys.pro"
+  ]
+ },
+ {
+  "key": "drpy_js_libvio",
+  "name": "影视 | libvio[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "libvio.app HTTP200 22140B",
+  "candidates": [
+   "libvio.app",
+   "tv.libvio.cc",
+   "libvio.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_tzfile",
+  "name": "影视 | 团长影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "t-rex.tzfile.com HTTP200 275770B",
+  "candidates": [
+   "t-rex.tzfile.com",
+   "www.aliyundrive.com",
+   "www.alipan.com"
+  ]
+ },
+ {
+  "key": "drpy_js_dydhhy",
+  "name": "影视 | dydhhy[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dydhhy.com HTTP200 49976B",
+  "candidates": [
+   "www.dydhhy.com",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_97tvs",
+  "name": "影视 | 97tvs[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.aliyundrive.com HTTP200 3781B",
+  "candidates": [
+   "www.97tvs.com",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_rrdyw",
+  "name": "影视 | rrdyw[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.rrdynb.com HTTP200 124967B",
+  "candidates": [
+   "www.rrdynb.com",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_meow",
+  "name": "影视 | meow搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "meow.tg HTTP200 23682B",
+  "candidates": [
+   "meow.tg"
+  ]
+ },
+ {
+  "key": "drpy_js_童趣",
+  "name": "少儿 | 童趣[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.boosj.com:无响应; search.boosj.com:无响应; gslb.boosj.com:无响应",
+  "candidates": [
+   "www.boosj.com",
+   "search.boosj.com",
+   "gslb.boosj.com"
+  ]
+ },
+ {
+  "key": "drpy_js_兔小贝",
+  "name": "少儿 | 兔小贝[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.tuxiaobei.com HTTP200 20914B",
+  "candidates": [
+   "www.tuxiaobei.com"
+  ]
+ },
+ {
+  "key": "drpy_js_有声绘本网",
+  "name": "少儿 | 有声绘本[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.youshenghuiben.com HTTP200 41858B",
+  "candidates": [
+   "www.youshenghuiben.com"
+  ]
+ },
+ {
+  "key": "drpy_js_我的哔哩",
+  "name": "弹幕 | 哔哩合集[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api.bilibili.com HTTP200 146445B",
+  "candidates": [
+   "api.bilibili.com",
+   "www.bilibili.com",
+   "live.bilibili.com"
+  ]
+ },
+ {
+  "key": "drpy_js_哔哩影视",
+  "name": "弹幕 | 哔哩影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api.bilibili.com HTTP200 148417B",
+  "candidates": [
+   "api.bilibili.com",
+   "www.bilibili.com"
+  ]
+ },
+ {
+  "key": "drpy_js_JustLive",
+  "name": "弹幕 | JustLive[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api.bilibili.com HTTP200 148504B",
+  "candidates": [
+   "live.yj1211.work",
+   "api.bilibili.com",
+   "live.bilibili.com",
+   "epg.cdn.loc.cc",
+   "www.aois.eu.org",
+   "www.goodiptv.club",
+   "maomao.kandiantv.cn",
+   "cfss.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_武享吧",
+  "name": "格斗 | 武享吧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.hula8.net HTTP200 74586B",
+  "candidates": [
+   "www.hula8.net"
+  ]
+ },
+ {
+  "key": "drpy_js_58动漫",
+  "name": "动漫 | 58动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ting38.com HTTP200 60184B",
+  "candidates": [
+   "www.ting38.com"
+  ]
+ },
+ {
+  "key": "drpy_js_AGE动漫",
+  "name": "动漫 | AGE动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "m.agemys.org HTTP200 141616B",
+  "candidates": [
+   "m.agemys.org",
+   "api.agemys.org",
+   "zj.sp-flv.com",
+   "vip.sp-flv.com"
+  ]
+ },
+ {
+  "key": "drpy_js_AnFuns",
+  "name": "动漫 | AnFuns[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.anfuns.cc:无响应",
+  "candidates": [
+   "www.anfuns.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_NyaFun",
+  "name": "动漫 | NyaFun[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.nyafun.net HTTP200 5540B",
+  "candidates": [
+   "www.nyafun.net"
+  ]
+ },
+ {
+  "key": "drpy_js_爱弹幕",
+  "name": "动漫 | 爱弹幕[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "anime.girigirilove.com:无响应",
+  "candidates": [
+   "anime.girigirilove.com"
+  ]
+ },
+ {
+  "key": "drpy_js_动漫岛",
+  "name": "动漫 | 动漫岛[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.88dmw.com HTTP200 5548B",
+  "candidates": [
+   "www.dmd85.com",
+   "www.88dmw.com",
+   "www.dmand5.com"
+  ]
+ },
+ {
+  "key": "drpy_js_喵次元",
+  "name": "影视 | 喵次元[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "cym.zhui.la HTTP409 7780B",
+  "candidates": [
+   "cym.zhui.la"
+  ]
+ },
+ {
+  "key": "drpy_js_奇米动漫",
+  "name": "动漫 | 奇米动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.qimiqimi.net HTTP200 5544B",
+  "candidates": [
+   "www.qimiqimi.net"
+  ]
+ },
+ {
+  "key": "drpy_js_曲奇动漫",
+  "name": "动漫 | 曲奇动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.quqidm.net HTTP200 5540B",
+  "candidates": [
+   "www.quqidm.net",
+   "www.quqim.net"
+  ]
+ },
+ {
+  "key": "drpy_js_异世界动漫漫",
+  "name": "动漫 | 异世界动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.lldm.net HTTP200 5532B",
+  "candidates": [
+   "www.lldm.net",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_怡萱动漫",
+  "name": "动漫 | 怡萱动漫[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "acgfans.org HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "acgfans.org",
+   "www.yxdmlove.com"
+  ]
+ },
+ {
+  "key": "drpy_js_短视频",
+  "name": "聚合 | 短视频[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.sharenice.net HTTP200 213619B",
+  "candidates": [
+   "www.sharenice.net",
+   "m.sharenice.net"
+  ]
+ },
+ {
+  "key": "drpy_js_爱看机器人",
+  "name": "影视 | 爱看机器人[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ikanbot.com HTTP200 27037B",
+  "candidates": [
+   "www.ikanbot.com",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_ikanbot2",
+  "name": "影视 | 爱看机器人2[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.ikanbot.com HTTP200 27037B",
+  "candidates": [
+   "www.ikanbot.com"
+  ]
+ },
+ {
+  "key": "drpy_js_ikanbot3",
+  "name": "影视 | 爱看机器人3[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.aikanbot.com:无响应",
+  "candidates": [
+   "www.aikanbot.com"
+  ]
+ },
+ {
+  "key": "drpy_js_139影视",
+  "name": "影视 | 139影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.139ys.com:无响应",
+  "candidates": [
+   "www.139ys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_348电影网",
+  "name": "影视 | 348电影网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.348z.com HTTP200 16407B",
+  "candidates": [
+   "www.348z.com"
+  ]
+ },
+ {
+  "key": "drpy_js_4K电影网",
+  "name": "影视 | 4K电影网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "xn--4k-ms3d190f0rl.com HTTP409 7813B",
+  "candidates": [
+   "xn--4k-ms3d190f0rl.com",
+   "4kdyw.qsclub.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_8号影院",
+  "name": "影视 | 8号影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.8hysw.com HTTP200 2176B",
+  "candidates": [
+   "www.8hysw.com",
+   "www.bahaoyy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_JangoIndex",
+  "name": "影视 | JangoIndex[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jango-index.tk HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "jango-index.ml",
+   "jango-index.tk"
+  ]
+ },
+ {
+  "key": "drpy_js_NY影院",
+  "name": "影视 | NY影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.nycvod.com:无响应",
+  "candidates": [
+   "www.nycvod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_被窝电影",
+  "name": "影视 | 被窝电影[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.bei5dy.com HTTP200 2191B",
+  "candidates": [
+   "www.bei5dy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_厂长资源",
+  "name": "影视 | 厂长资源[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.czzy.site HTTP200 2355B",
+  "candidates": [
+   "www.czzy.site",
+   "cz01.vip",
+   "www.czzymovie.com",
+   "pastebin.com",
+   "czspp.com"
+  ]
+ },
+ {
+  "key": "drpy_js_楚门影院",
+  "name": "影视 | 楚门影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.chumenys.com HTTP200 91799B",
+  "candidates": [
+   "www.chumenys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_飞兔影视",
+  "name": "影视 | 飞兔影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.feitu.tv:无响应",
+  "candidates": [
+   "www.feitu.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_海兔影院",
+  "name": "影视 | 海兔影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.haitu.tv HTTP200 2176B",
+  "candidates": [
+   "www.haitu.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_花猫TV",
+  "name": "影视 | 花猫TV[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.huamaotv.com HTTP200 478B",
+  "candidates": [
+   "www.huamaotv.com"
+  ]
+ },
+ {
+  "key": "drpy_js_花屋影院",
+  "name": "影视 | 花屋影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.huafun.vip HTTP409 7789B",
+  "candidates": [
+   "www.huafun.vip",
+   "huafun.vip"
+  ]
+ },
+ {
+  "key": "drpy_js_开眼视频",
+  "name": "影视 | 开眼视频[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "baobab.kaiyanapp.com HTTP200 3698B",
+  "candidates": [
+   "baobab.kaiyanapp.com"
+  ]
+ },
+ {
+  "key": "drpy_js_徕米TV",
+  "name": "影视 | 徕米TV[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.laimi.me:HTTP530",
+  "candidates": [
+   "www.laimi.me"
+  ]
+ },
+ {
+  "key": "drpy_js_乐鱼影视",
+  "name": "影视 | 乐鱼影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.leyupro.com:无响应; www.yu992.com:HTTP502",
+  "candidates": [
+   "www.leyupro.com",
+   "www.yu992.com"
+  ]
+ },
+ {
+  "key": "drpy_js_美剧网",
+  "name": "影视 | 美剧网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.meiju56.com:无响应",
+  "candidates": [
+   "www.meiju56.com"
+  ]
+ },
+ {
+  "key": "drpy_js_美视网",
+  "name": "影视 | 美视网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.mgtv.fun:无响应",
+  "candidates": [
+   "www.mgtv.fun"
+  ]
+ },
+ {
+  "key": "drpy_js_米爱影视",
+  "name": "影视 | 米爱影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.miai.cc:HTTP502; www.miai9.cc:无响应",
+  "candidates": [
+   "www.miai.cc",
+   "www.miai9.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_免费看",
+  "name": "影视 | 免费看[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "qzy998-1.ysgq.xyz HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "mfkys.com",
+   "qzy998-1.ysgq.xyz"
+  ]
+ },
+ {
+  "key": "drpy_js_奈飞中文",
+  "name": "影视 | 奈飞中文[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.naifei.io HTTP200 475B",
+  "candidates": [
+   "www.naifei.io",
+   "www.naifei.art"
+  ]
+ },
+ {
+  "key": "drpy_js_欧帝影院",
+  "name": "影视 | 欧帝影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.odivod.com HTTP409 7789B",
+  "candidates": [
+   "www.odivod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_皮皮鸭",
+  "name": "影视 | 皮皮鸭[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ppydy.com:HTTP502; pipiya.cc:HTTP503",
+  "candidates": [
+   "www.ppydy.com",
+   "pipiya.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_朴樱影视",
+  "name": "影视 | 朴樱影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.pyys.top HTTP409 7783B",
+  "candidates": [
+   "www.pyys.top"
+  ]
+ },
+ {
+  "key": "drpy_js_秋霞影院",
+  "name": "影视 | 秋霞影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.7xiady.cc HTTP200 1766B",
+  "candidates": [
+   "www.7xiady.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_热播之家",
+  "name": "影视 | 热播之家[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "rebozj.pro HTTP200 82084B",
+  "candidates": [
+   "rebozj.pro"
+  ]
+ },
+ {
+  "key": "drpy_js_人人影视",
+  "name": "影视 | 人人影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.rttks.com HTTP200 77153B",
+  "candidates": [
+   "www.rttks.com"
+  ]
+ },
+ {
+  "key": "drpy_js_骚火电影",
+  "name": "影视 | 骚火电影[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "api.hhplayer.com HTTP409 7795B",
+  "candidates": [
+   "shdy3.com",
+   "shapp.us",
+   "api.hhplayer.com",
+   "hkjx.hhplayer.com",
+   "hhjx.hhplayer.com",
+   "play.hhplayer.com"
+  ]
+ },
+ {
+  "key": "drpy_js_时光影视",
+  "name": "影视 | 时光影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.shigys.com HTTP200 1135B",
+  "candidates": [
+   "www.shigys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_思古影视",
+  "name": "影视 | 思古影视",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "jx.777jiexi.com HTTP200 5544B",
+  "candidates": [
+   "xxmsrj.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_私人影院",
+  "name": "影视 | 私人影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.bei5dy.com HTTP200 2191B",
+  "candidates": [
+   "www.bei5dy.com",
+   "www.bei5dy.net"
+  ]
+ },
+ {
+  "key": "drpy_js_素白白",
+  "name": "影视 | 素白白[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "subaibai.vip HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "subaibai.vip",
+   "www.subaibaiys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_网飞.TV",
+  "name": "影视 | 网飞.TV[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.wangfei.tv HTTP200 76242B",
+  "candidates": [
+   "www.wangfei.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_西瓜影院",
+  "name": "影视 | 西瓜影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.uccomic.com:HTTP502",
+  "candidates": [
+   "www.uccomic.com"
+  ]
+ },
+ {
+  "key": "drpy_js_蜥蜴影视",
+  "name": "影视 | 蜥蜴影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "xi1.net HTTP200 469B",
+  "candidates": [
+   "xi1.net"
+  ]
+ },
+ {
+  "key": "drpy_js_小狗影院",
+  "name": "影视 | 小狗影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "pupvod.com:HTTP502",
+  "candidates": [
+   "pupvod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_新视觉影视",
+  "name": "影视 | 新视觉影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.5280.fun HTTP200 1628B",
+  "candidates": [
+   "www.5280.fun",
+   "www.6080dy4.com"
+  ]
+ },
+ {
+  "key": "drpy_js_星辰影院",
+  "name": "影视 | 星辰影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.40yb.com HTTP200 2191B",
+  "candidates": [
+   "www.40yb.com"
+  ]
+ },
+ {
+  "key": "drpy_js_玄天",
+  "name": "影视 | 玄天[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "m.7caa.com:无响应",
+  "candidates": [
+   "m.7caa.com"
+  ]
+ },
+ {
+  "key": "drpy_js_映迷影院",
+  "name": "影视 | 映迷影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.inmi.app:HTTP404",
+  "candidates": [
+   "www.inmi.app"
+  ]
+ },
+ {
+  "key": "drpy_js_中国人",
+  "name": "影视 | 中国人[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "chinaqtv.co:无响应",
+  "candidates": [
+   "chinaqtv.co"
+  ]
+ },
+ {
+  "key": "drpy_js_追剧迷",
+  "name": "影视 | 追剧迷[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.zhuijumi.cc:HTTP521",
+  "candidates": [
+   "www.zhuijumi.cc"
+  ]
+ },
+ {
+  "key": "drpy_js_子子影视",
+  "name": "影视 | 子子影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ziziys.com:无响应",
+  "candidates": [
+   "www.ziziys.com"
+  ]
+ },
+ {
+  "key": "drpy_js_大师兄影视",
+  "name": "起飞 | 大师兄影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "dsxys.com:无响应; dsxys.pro:无响应",
+  "candidates": [
+   "dsxys.com",
+   "dsxys.pro"
+  ]
+ },
+ {
+  "key": "drpy_js_华乐影院",
+  "name": "起飞 | 华乐影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.huale.org:无响应",
+  "candidates": [
+   "www.huale.org"
+  ]
+ },
+ {
+  "key": "drpy_js_天天视频",
+  "name": "起飞 | 天天视频[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ttsp.tv:无响应",
+  "candidates": [
+   "www.ttsp.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_起飞影院",
+  "name": "起飞 | 起飞影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "qfitv.com HTTP200 471B",
+  "candidates": [
+   "qfitv.com",
+   "fun.tvoled.net"
+  ]
+ },
+ {
+  "key": "drpy_js_兰花影院",
+  "name": "起飞 | 兰花影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.lanhuatv.com HTTP409 7795B",
+  "candidates": [
+   "www.lanhuatv.com",
+   "jx.xmflv.com",
+   "jx.777jiexi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_胖虎",
+  "name": "起飞 | 胖虎[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "cdnkan.top HTTP200 11874B",
+  "candidates": [
+   "cdnkan.top",
+   "www.physkan.com"
+  ]
+ },
+ {
+  "key": "drpy_js_if101[飞]",
+  "name": "起飞 | if101[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "olevod.live HTTP200 5564B",
+  "candidates": [
+   "olevod.live",
+   "olevod.io"
+  ]
+ },
+ {
+  "key": "drpy_js_KUBO影视[飞]",
+  "name": "起飞 | KUBO影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "123kubo.tv HTTP200 246200B",
+  "candidates": [
+   "123kubo.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_爱壹帆[飞]",
+  "name": "起飞 | 爱壹帆[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.iyf1.tv HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.iyf1.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_独播库[飞]",
+  "name": "起飞 | 独播库[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.duboku.tv HTTP200 5564B",
+  "candidates": [
+   "www.duboku.tv",
+   "u.duboku.io",
+   "w.duboku.io"
+  ]
+ },
+ {
+  "key": "drpy_js_欧乐影院[飞]",
+  "name": "起飞 | 欧乐影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.olevod.com:无响应",
+  "candidates": [
+   "www.olevod.com"
+  ]
+ },
+ {
+  "key": "drpy_js_小宝影院[飞]",
+  "name": "起飞 | 小宝影院[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "xiaobaotv.net HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "xiaobaotv.net"
+  ]
+ },
+ {
+  "key": "應用商店",
+  "name": "應用商店",
+  "type": 3,
+  "api": "csp_Market",
+  "verdict": "alive",
+  "detail": "qist.cc HTTP200 224035B",
+  "candidates": [
+   "qist.cc",
+   "i.imgs.ovh",
+   "fm.caioa.link"
+  ]
+ },
+ {
+  "key": "有声小说js",
+  "name": "🎧有声┃小说",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:返回HTML | ac=detail&wd=%E6%B5%8B%E8%AF%95:返回HTML]；首页:HTTP200 474B",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "haiwaikan",
+  "name": "海外看┃采集",
+  "type": 1,
+  "api": "https://haiwaikan.com/api.php/provide/vod",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='haiwaikan.com', port=443): Max retries excee | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='haiwaikan.com', port=443): Max retries excee]；首页:无响应",
+  "candidates": [
+   "https://haiwaikan.com/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "快帆",
+  "name": "快帆┃采集",
+  "type": 1,
+  "api": "https://api.kuaifan.tv/api.php/provide/vod",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='api.kuaifan.tv', port=443): Max retries exce | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='api.kuaifan.tv', port=443): Max retries exce]；首页:无响应",
+  "candidates": [
+   "https://api.kuaifan.tv/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "csp_YGP",
+  "name": "预告片",
+  "type": 3,
+  "api": "csp_YGP",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Bili",
+  "name": "哔哩",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "Ikanbot",
+  "name": "爱看",
+  "type": 3,
+  "api": "csp_Ikanbot",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "SeedHub",
+  "name": "SeedHub",
+  "type": 3,
+  "api": "csp_SeedHub",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "小白",
+  "name": "小白",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "www.xbw20.com HTTP200 5536B",
+  "candidates": [
+   "www.xbw20.com"
+  ]
+ },
+ {
+  "key": "布谷tv",
+  "name": "布谷4K",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "www.bugutv.org:无响应",
+  "candidates": [
+   "www.bugutv.org"
+  ]
+ },
+ {
+  "key": "haokongbu",
+  "name": "好恐怖",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "m.haokongbu.top HTTP200 27384B",
+  "candidates": [
+   "m.haokongbu.top"
+  ]
+ },
+ {
+  "key": "圣城1080",
+  "name": "圣城1080",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "sc1080.top HTTP200 5532B",
+  "candidates": [
+   "sc1080.top"
+  ]
+ },
+ {
+  "key": "秋霞",
+  "name": "秋霞",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "www.hongbaohk.com:无响应",
+  "candidates": [
+   "www.hongbaohk.com"
+  ]
+ },
+ {
+  "key": "VidHub",
+  "name": "VidHub",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "vidhub1.cc HTTP200 410816B",
+  "candidates": [
+   "vidhub1.cc"
+  ]
+ },
+ {
+  "key": "rarbt",
+  "name": "rarbt",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "www.rarbt.fun:HTTP502",
+  "candidates": [
+   "www.rarbt.fun"
+  ]
+ },
+ {
+  "key": "XBPQ_文才",
+  "name": "文才",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "api.zeqaht.com HTTP200 28353B",
+  "candidates": [
+   "api.zeqaht.com",
+   "m.cfkj86.com"
+  ]
+ },
+ {
+  "key": "XBPQ_BaiPiao",
+  "name": "白嫖影视",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "www.baipiaoys.com:HTTP502",
+  "candidates": [
+   "www.baipiaoys.com"
+  ]
+ },
+ {
+  "key": "XBPQ_黑狐影院",
+  "name": "黑狐影院",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "fagmn.com HTTP200 155586B",
+  "candidates": [
+   "fagmn.com"
+  ]
+ },
+ {
+  "key": "XBPQ_电影先生",
+  "name": "电影先生",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "dianyi.ng:无响应",
+  "candidates": [
+   "dianyi.ng"
+  ]
+ },
+ {
+  "key": "XBPQ_麻衣影院",
+  "name": "麻衣影院",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "dead",
+  "detail": "www.huanyuxing.com:无响应",
+  "candidates": [
+   "www.huanyuxing.com"
+  ]
+ },
+ {
+  "key": "drpy_js_美剧迷p",
+  "name": "美剧迷[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.meijumi.net HTTP200 134046B",
+  "candidates": [
+   "www.meijumi.net",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_yyetsp",
+  "name": "人人搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "yyets.click HTTP200 3840B",
+  "candidates": [
+   "yyets.click"
+  ]
+ },
+ {
+  "key": "乐视",
+  "name": "乐视",
+  "type": 1,
+  "api": "https://leshiapi.com/api.php/provide/vod",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='leshiapi.com', port=443): Max retries exceed | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='leshiapi.com', port=443): Max retries exceed]；首页:无响应",
+  "candidates": [
+   "https://leshiapi.com/api.php/provide/vod"
+  ]
+ },
+ {
+  "key": "dr_兔小贝",
+  "name": "📚儿童┃启蒙",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:返回HTML | ac=detail&wd=%E6%B5%8B%E8%AF%95:返回HTML]；首页:HTTP200 474B",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "商店",
+  "name": "商店",
+  "type": 3,
+  "api": "csp_Market",
+  "verdict": "alive",
+  "detail": "qist.cc HTTP200 224035B",
+  "candidates": [
+   "qist.cc",
+   "i.imgs.ovh",
+   "fm.caioa.link"
+  ]
+ },
+ {
+  "key": "bili_open",
+  "name": "哔哩貓",
+  "type": 3,
+  "api": "./cat/js/bili_open.js",
+  "verdict": "alive",
+  "detail": "www.bilibili.com HTTP200 148417B",
+  "candidates": [
+   "www.bilibili.com",
+   "api.bilibili.com"
+  ]
+ },
+ {
+  "key": "盤搜",
+  "name": "盤搜",
+  "type": 3,
+  "api": "csp_PanSou",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_Missav",
+  "name": "Missav",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "missav.ai:无响应",
+  "candidates": [
+   "missav.ai"
+  ]
+ },
+ {
+  "key": "drpy_js_玩偶姐姐",
+  "name": "玩偶姐姐",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "hongkongdollvideo.com:无响应",
+  "candidates": [
+   "hongkongdollvideo.com"
+  ]
+ },
+ {
+  "key": "drpy_js_朱古力",
+  "name": "朱古力",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "pigav.com:无响应",
+  "candidates": [
+   "pigav.com"
+  ]
+ },
+ {
+  "key": "155zy.com",
+  "name": "♥155(直连)",
+  "type": 1,
+  "api": "https://155api.com/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://155api.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "jkunzy.com",
+  "name": "💕jkun(直连)",
+  "type": 1,
+  "api": "https://jkunzyapi.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='jkunzyapi.com', port=443): Max retries excee | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='jkunzyapi.com', port=443): Max retries excee]；首页:无响应",
+  "candidates": [
+   "https://jkunzyapi.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "lebozy.com",
+  "name": "💕乐播(直连)",
+  "type": 1,
+  "api": "https://lbapi9.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='lbapi9.com', port=443): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='lbapi9.com', port=443): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "https://lbapi9.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "senlinzy.com",
+  "name": "♥森林(直连)",
+  "type": 1,
+  "api": "https://slapibf.com/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://slapibf.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "didizy.com",
+  "name": "♥滴滴(直连)",
+  "type": 1,
+  "api": "https://api.ddapi.cc/api.php/provide/vod/?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://api.ddapi.cc/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "vnzyz.com",
+  "name": "💕越南(直连)",
+  "type": 1,
+  "api": "https://vnzyz.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='vnzyz.com', port=443): Max retries exceeded  | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='vnzyz.com', port=443): Max retries exceeded ]；首页:无响应",
+  "candidates": [
+   "https://vnzyz.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "laosebizy.com",
+  "name": "💕老色逼(直连)",
+  "type": 1,
+  "api": "https://apilsbzy1.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='apilsbzy1.com', port=443): Max retries excee | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='apilsbzy1.com', port=443): Max retries excee]；首页:无响应",
+  "candidates": [
+   "https://apilsbzy1.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "fhapi9.com",
+  "name": "★废柴(直连)",
+  "type": 1,
+  "api": "http://fhapi9.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://fhapi9.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "madouse.la",
+  "name": "★魔法(直连)",
+  "type": 1,
+  "api": "http://madouse.la/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea]；首页:无响应",
+  "candidates": [
+   "http://madouse.la/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "jingpinx.com",
+  "name": "★精品下(直连)",
+  "type": 1,
+  "api": "http://www.jingpinx.com/api.php/provide/vod/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://www.jingpinx.com/api.php/provide/vod/?ac=list"
+  ]
+ },
+ {
+  "key": "semaozy.com",
+  "name": "色猫(FQ)",
+  "type": 1,
+  "api": "https://caiji.semaozy.net/inc/apijson_vod.php",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='caiji.semaozy.net', port=443): Max retries e | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='caiji.semaozy.net', port=443): Max retries e]；首页:无响应",
+  "candidates": [
+   "https://caiji.semaozy.net/inc/apijson_vod.php"
+  ]
+ },
+ {
+  "key": "lajiaozy.com",
+  "name": "辣椒(FQ)",
+  "type": 1,
+  "api": "https://apilj.com/api.php/provide/vod/at/json/?ac=list",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPSConnectionPool(host='apilj.com', port=443): Read timed out. (read | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPSConnectionPool(host='apilj.com', port=443): Read timed out. (read]；首页:无响应",
+  "candidates": [
+   "https://apilj.com/api.php/provide/vod/at/json/?ac=list"
+  ]
+ },
+ {
+  "key": "ffzy.tv",
+  "name": "非凡2",
+  "type": 1,
+  "api": "https://ffzy.tv/api.php/provide/vod/",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://ffzy.tv/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "玉兔资源",
+  "name": "玉兔资源",
+  "type": 0,
+  "api": "https://apiyutu.com/api.php/provide/vod/at/xml/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='apiyutu.com', port=443): Max retries exceede | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='apiyutu.com', port=443): Max retries exceede]；首页:无响应",
+  "candidates": [
+   "https://apiyutu.com/api.php/provide/vod/at/xml/"
+  ]
+ },
+ {
+  "key": "wmcj8.com",
+  "name": "成人05",
+  "type": 0,
+  "api": "http://wmcj8.com/inc/sapi.php",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea]；首页:无响应",
+  "candidates": [
+   "http://wmcj8.com/inc/sapi.php"
+  ]
+ },
+ {
+  "key": "apilj.com",
+  "name": "成人06",
+  "type": 1,
+  "api": "http://apilj.com/api.php/provide/vod/at/json/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea]；首页:无响应",
+  "candidates": [
+   "http://apilj.com/api.php/provide/vod/at/json/"
+  ]
+ },
+ {
+  "key": "91md.me",
+  "name": "成人07",
+  "type": 1,
+  "api": "http://91md.me/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://91md.me/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "dadiapi.com",
+  "name": "成人09",
+  "type": 0,
+  "api": "http://dadiapi.com/api.php",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://dadiapi.com/api.php"
+  ]
+ },
+ {
+  "key": "api.11bat.com",
+  "name": "成人15",
+  "type": 0,
+  "api": "http://api.11bat.com/api.php/provide/vod/at/xml",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://api.11bat.com/api.php/provide/vod/at/xml"
+  ]
+ },
+ {
+  "key": "afasu.com",
+  "name": "成人25",
+  "type": 0,
+  "api": "http://www.afasu.com/api/xml.php",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea]；首页:无响应",
+  "candidates": [
+   "http://www.afasu.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "gdlsp.com",
+  "name": "成人19",
+  "type": 0,
+  "api": "https://www.gdlsp.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4231B",
+  "candidates": [
+   "https://www.gdlsp.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "msnii.com",
+  "name": "成人20",
+  "type": 0,
+  "api": "https://www.msnii.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4124B",
+  "candidates": [
+   "https://www.msnii.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "xrbsp.com",
+  "name": "成人21",
+  "type": 0,
+  "api": "https://www.xrbsp.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4207B",
+  "candidates": [
+   "https://www.xrbsp.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "kxgav.com",
+  "name": "成人22",
+  "type": 0,
+  "api": "https://www.kxgav.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4183B",
+  "candidates": [
+   "https://www.kxgav.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "lbapi9.com",
+  "name": "成人26",
+  "type": 1,
+  "api": "https://lbapi9.com/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='lbapi9.com', port=443): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='lbapi9.com', port=443): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "https://lbapi9.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "bt4.cc",
+  "name": "★91麻豆②(直连)",
+  "type": 1,
+  "api": "http://bt4.cc/api.php/provide/vod/from/mdm3u8/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPConnectionPool(host='127.0.0.1', port=54251): Max retries exceeded]；首页:无响应",
+  "candidates": [
+   "http://bt4.cc/api.php/provide/vod/from/mdm3u8/"
+  ]
+ },
+ {
+  "key": "lbapiby.com",
+  "name": "★AIvin(直连)",
+  "type": 0,
+  "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:HTTP502 | ac=detail&wd=%E6%B5%8B%E8%AF%95:HTTP502]；首页:无响应",
+  "candidates": [
+   "http://lbapiby.com/api.php/provide/vod/at/xml"
+  ]
+ },
+ {
+  "key": "pgxdy.com",
+  "name": "★黄AV(直连)",
+  "type": 0,
+  "api": "https://www.pgxdy.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4289B",
+  "candidates": [
+   "https://www.pgxdy.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "www.pgxdy.com",
+  "name": "黄AV",
+  "type": 0,
+  "api": "https://www.pgxdy.com/api/xml.php",
+  "verdict": "alive",
+  "detail": "CMS-XML 4289B",
+  "candidates": [
+   "https://www.pgxdy.com/api/xml.php"
+  ]
+ },
+ {
+  "key": "api.maozyapi.com",
+  "name": "成人16",
+  "type": 1,
+  "api": "https://api.maozyapi.com/inc/apijson_vod.php",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='api.maozyapi.com', port=443): Max retries ex | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='api.maozyapi.com', port=443): Max retries ex]；首页:无响应",
+  "candidates": [
+   "https://api.maozyapi.com/inc/apijson_vod.php"
+  ]
+ },
+ {
+  "key": "apittzy.com",
+  "name": "成人18",
+  "type": 1,
+  "api": "https://apittzy.com/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='apittzy.com', port=443): Max retries exceede | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='apittzy.com', port=443): Max retries exceede]；首页:无响应",
+  "candidates": [
+   "https://apittzy.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "kkzy.me",
+  "name": "成人23",
+  "type": 1,
+  "api": "https://kkzy.me/api.php/provide/vod/",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='kkzy.me', port=443): Max retries exceeded wi | ac=detail&wd=%E6%B5%8B%E8%AF%95:返回HTML]；首页:HTTP200 92559B",
+  "candidates": [
+   "https://kkzy.me/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "shayuapi.com",
+  "name": "成人24",
+  "type": 1,
+  "api": "https://shayuapi.com/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:SSLError: HTTPSConnectionPool(host='shayuapi.com', port=443): Max retries exceed | ac=detail&wd=%E6%B5%8B%E8%AF%95:SSLError: HTTPSConnectionPool(host='shayuapi.com', port=443): Max retries exceed]；首页:无响应",
+  "candidates": [
+   "https://shayuapi.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "api.apilyzy.com",
+  "name": "成人27",
+  "type": 1,
+  "api": "https://api.apilyzy.com/api.php/provide/vod/",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ProxyError: HTTPSConnectionPool(host='api.apilyzy.com', port=443): Max retries exc | ac=detail&wd=%E6%B5%8B%E8%AF%95:ProxyError: HTTPSConnectionPool(host='api.apilyzy.com', port=443): Max retries exc]；首页:无响应",
+  "candidates": [
+   "https://api.apilyzy.com/api.php/provide/vod/"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_影搜",
+  "name": "📀影搜(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "yingso.fun HTTP200 4688B",
+  "candidates": [
+   "yingso.fun",
+   "ys.api.yingso.fun",
+   "www.aliyundrive.com"
+  ]
+ },
+ {
+  "key": "csp_New6v",
+  "name": "🧲新6V",
+  "type": 3,
+  "api": "csp_New6v",
+  "verdict": "alive",
+  "detail": "www.xb6v.com HTTP200 51773B",
+  "candidates": [
+   "www.xb6v.com"
+  ]
+ },
+ {
+  "key": "csp_SeedHub",
+  "name": "🧲SeedHub",
+  "type": 3,
+  "api": "csp_SeedHub",
+  "verdict": "alive",
+  "detail": "www.seedhub.cc HTTP200 41472B",
+  "candidates": [
+   "www.seedhub.cc"
+  ]
+ },
+ {
+  "key": "csp_MeijuMi",
+  "name": "🧲美剧迷",
+  "type": 3,
+  "api": "csp_MeijuMi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "360_spider",
+  "name": "🐞360影视",
+  "type": 3,
+  "api": "csp_SP360",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Czsapp",
+  "name": "🐞厂长资源",
+  "type": 3,
+  "api": "csp_Czsapp",
+  "verdict": "dead",
+  "detail": "www.czys.top:HTTP502",
+  "candidates": [
+   "www.czys.top"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_哔嘀影视",
+  "name": "🧲哔嘀影视(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "www.yjys02.com HTTP200 5568B",
+  "candidates": [
+   "www.yjys02.com",
+   "cn.bing.com"
+  ]
+ },
+ {
+  "key": "csp_JianPian",
+  "name": "🔨荐片",
+  "type": 3,
+  "api": "csp_JianPian",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Ikanbot",
+  "name": "👾Ikanbot",
+  "type": 3,
+  "api": "csp_Ikanbot",
+  "verdict": "dead",
+  "detail": "v.aikanbot.com:无响应",
+  "candidates": [
+   "v.aikanbot.com"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_兔小贝",
+  "name": "兔小贝(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "www.tuxiaobei.com HTTP200 20914B",
+  "candidates": [
+   "www.tuxiaobei.com"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_兔小贝2",
+  "name": "兔小贝2(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "www.tuxiaobei.com HTTP200 20914B",
+  "candidates": [
+   "www.tuxiaobei.com"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_播视童趣",
+  "name": "播视童趣(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "dead",
+  "detail": "www.boosj.com:无响应",
+  "candidates": [
+   "www.boosj.com"
+  ]
+ },
+ {
+  "key": "csp_Bili幼儿",
+  "name": "🐞哔哩幼儿",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Bili少儿",
+  "name": "🐞哔哩少儿",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Bili小学",
+  "name": "🐞哔哩小学",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Bili初中",
+  "name": "🐞哔哩初中",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_Bili高中",
+  "name": "🐞哔哩高中",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_XYQHiker_农民影视",
+  "name": "🧑🏻‍农民影视",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "v.nmvod.cn HTTP200 77331B",
+  "candidates": [
+   "www.wwgz.cn",
+   "v.nmvod.cn",
+   "live.52sf.ga",
+   "play.peizq.online"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_七新影视",
+  "name": "七新影视(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "www.7xdy.com HTTP200 703B",
+  "candidates": [
+   "www.7xdy.com"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_可可影视",
+  "name": "可可影视(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "dead",
+  "detail": "www.keke1.app:HTTP850; vres.miximixi.me:HTTP502",
+  "candidates": [
+   "www.keke1.app",
+   "vres.miximixi.me"
+  ]
+ },
+ {
+  "key": "MoggV2",
+  "name": "🍁优汐木偶┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "UcXmV2",
+  "name": "🐂小二资源┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "QuarkLaBiV2",
+  "name": "🖍︎蜡笔资源┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "664K",
+  "name": "🌀沐风┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "4Kdy",
+  "name": "🕊️凝安┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "贱贱",
+  "name": "🐭贱贱┃P2P┃纯净",
+  "type": 3,
+  "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:非预期'import cheerio from\"assets://j' | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期'import cheerio from\"assets://j']；首页:无响应",
+  "candidates": [
+   "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "五五影视",
+  "name": "😭呜呜┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "面包影视",
+  "name": "🍞面包┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "樱花",
+  "name": "🌸樱花┃动漫┃樱花",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "去看吧",
+  "name": "🫣看吧┃动漫┃蓝光",
+  "type": 3,
+  "api": "https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/JS/drpy.min.js",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPSConnectionPool(host='github.moeyy.xyz', port=443): Read timed out | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPSConnectionPool(host='github.moeyy.xyz', port=443): Read timed out]；首页:无响应",
+  "candidates": [
+   "https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/JS/drpy.min.js"
+  ]
+ },
+ {
+  "key": "玩耦",
+  "name": "💯玩耦｜4K臻享",
+  "type": 3,
+  "api": "csp_Wogg",
+  "verdict": "alive",
+  "detail": "www.wogg.live HTTP200 569991B",
+  "candidates": [
+   "wogg.xxooo.cf",
+   "www.wogg.live",
+   "www.wogg.net",
+   "woggpan.xxooo.cf"
+  ]
+ },
+ {
+  "key": "欧哥",
+  "name": "💯欧哥｜4K臻享",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "alive",
+  "detail": "woog.nxog.eu.org HTTP200 408783B",
+  "candidates": [
+   "woog.nxog.eu.org",
+   "woog.nxog.fun",
+   "woog.430520.xyz"
+  ]
+ },
+ {
+  "key": "gulu",
+  "name": "🐧咕噜丨蓝光秒播",
+  "type": 3,
+  "api": "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/James/main/py/咕噜咕噜.py",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:非预期'# -*- coding: utf-8 -*-\\n\"\"\"\\n咕噜' | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期'# -*- coding: utf-8 -*-\\n\"\"\"\\n咕噜']；首页:HTTP200 71870B",
+  "candidates": [
+   "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/James/main/py/咕噜咕噜.py"
+  ]
+ },
+ {
+  "key": "shanzha4k",
+  "name": "🍒山楂丨蓝光秒播",
+  "type": 3,
+  "api": "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/Tomorrow/refs/heads/master/py/山楂4K.py",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:非预期'# -*- coding: utf-8 -*-\\n\"\"\"\\n==' | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期'# -*- coding: utf-8 -*-\\n\"\"\"\\n==']；首页:HTTP200 71870B",
+  "candidates": [
+   "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/Tomorrow/refs/heads/master/py/山楂4K.py"
+  ]
+ },
+ {
+  "key": "yuetingba",
+  "name": "🍊悦听吧",
+  "type": 3,
+  "api": "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/James/main/py/悦听吧.py",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:非预期'#!/usr/bin/python3\\n# -*- codin' | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期'#!/usr/bin/python3\\n# -*- codin']；首页:HTTP200 71870B",
+  "candidates": [
+   "https://gh-proxy.com/https://raw.githubusercontent.com/tushen6/James/main/py/悦听吧.py"
+  ]
+ },
+ {
+  "key": "热播影视",
+  "name": "热播 • APP",
+  "type": 3,
+  "api": "csp_AppRJ",
+  "verdict": "alive",
+  "detail": "v.rbotv.cn HTTP200 5820B",
+  "candidates": [
+   "v.rbotv.cn"
+  ]
+ },
+ {
+  "key": "快映fox",
+  "name": "快映 • APP",
+  "type": 3,
+  "api": "csp_AppFox",
+  "verdict": "alive",
+  "detail": "www.kanzurm65ak.top HTTP200 1318B",
+  "candidates": [
+   "www.kanzurm65ak.top"
+  ]
+ },
+ {
+  "key": "一起影视",
+  "name": "一起 • APP",
+  "type": 3,
+  "api": "csp_AppYQK",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "咕噜",
+  "name": "咕噜 • APP",
+  "type": 3,
+  "api": "csp_Gulu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "布布",
+  "name": "布布 • APP",
+  "type": 3,
+  "api": "csp_YunDuo",
+  "verdict": "alive",
+  "detail": "323433ssdfd.top HTTP200 1959B",
+  "candidates": [
+   "323433ssdfd.top"
+  ]
+ },
+ {
+  "key": "马猴影视",
+  "name": "马猴 • APP",
+  "type": 3,
+  "api": "csp_App3Q",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "韩圈",
+  "name": "韩圈 • APP",
+  "type": 3,
+  "api": "csp_Hxq",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "剧圈99",
+  "name": "剧圈 • APP",
+  "type": 3,
+  "api": "csp_App99",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "半日99",
+  "name": "半日 • APP",
+  "type": 3,
+  "api": "csp_App99",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "天堂",
+  "name": "天堂 • APP",
+  "type": 3,
+  "api": "csp_AppDrama",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "橘汁",
+  "name": "橘汁 • APP",
+  "type": 3,
+  "api": "csp_AppDrama",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "华谊",
+  "name": "华谊 • APP",
+  "type": 3,
+  "api": "csp_AppDrama",
+  "verdict": "alive",
+  "detail": "1851089669.cdn.123clouddisk.com HTTP200 1056B",
+  "candidates": [
+   "1851089669.cdn.123clouddisk.com"
+  ]
+ },
+ {
+  "key": "苹果",
+  "name": "苹果 • APP",
+  "type": 3,
+  "api": "csp_AppDrama",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "蓝鹰",
+  "name": "蓝鹰 • APP",
+  "type": 3,
+  "api": "csp_AppQi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "蓝鸟",
+  "name": "蓝鸟 • APP",
+  "type": 3,
+  "api": "csp_AppQi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "王子",
+  "name": "王子 • APP",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "alive",
+  "detail": "app.95112475.xyz HTTP200 13519B",
+  "candidates": [
+   "app.95112475.xyz"
+  ]
+ },
+ {
+  "key": "茉莉Get",
+  "name": "茉莉 • APP",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "忍者",
+  "name": "🥷忍者┃蓝光┃弹幕",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "dead",
+  "detail": "mfxs123.sbs:HTTP502",
+  "candidates": [
+   "mfxs123.sbs"
+  ]
+ },
+ {
+  "key": "彼岸",
+  "name": "🍂菲菲┃蓝光┃弹幕",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "dead",
+  "detail": "qjappcms.sun4k.top:HTTP502",
+  "candidates": [
+   "qjappcms.sun4k.top"
+  ]
+ },
+ {
+  "key": "橘子",
+  "name": "🍊橘子┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "dead",
+  "detail": "api1.bffree.cn:无响应",
+  "candidates": [
+   "api1.bffree.cn"
+  ]
+ },
+ {
+  "key": "雨滴",
+  "name": "⛱️雨滴┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "人人",
+  "name": "☃️人人┃蓝光┃无广",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "alive",
+  "detail": "www.xiaohys.com HTTP200 32438B",
+  "candidates": [
+   "www.xiaohys.com"
+  ]
+ },
+ {
+  "key": "天天影视",
+  "name": "⛅️天天┃蓝光┃弹幕",
+  "type": 3,
+  "api": "csp_AppRJ",
+  "verdict": "dead",
+  "detail": "tt.ysdqjs.cn:HTTP502",
+  "candidates": [
+   "tt.ysdqjs.cn"
+  ]
+ },
+ {
+  "key": "浪酷影视",
+  "name": "😎浪酷┃蓝光┃弹幕",
+  "type": 3,
+  "api": "csp_AppRJ",
+  "verdict": "dead",
+  "detail": "v.lkuys.cn:HTTP502",
+  "candidates": [
+   "v.lkuys.cn"
+  ]
+ },
+ {
+  "key": "魔方",
+  "name": "💠魔方丨蓝光秒播",
+  "type": 3,
+  "api": "csp_AppGet",
+  "verdict": "alive",
+  "detail": "www.douy32mf.top HTTP200 1025B",
+  "candidates": [
+   "www.douy32mf.top"
+  ]
+ },
+ {
+  "key": "天堂1",
+  "name": "🎬电影天堂丨蓝光",
+  "type": 3,
+  "api": "csp_AppYsV2",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "一起",
+  "name": "👀一起看丨蓝光影视",
+  "type": 3,
+  "api": "csp_AppYQK",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "种子",
+  "name": "种子 • 4K",
+  "type": 3,
+  "api": "csp_SeedHub",
+  "verdict": "alive",
+  "detail": "sidhub.cc HTTP200 41381B",
+  "candidates": [
+   "sidhub.cc",
+   "seeduck.cc",
+   "hubdog.cc"
+  ]
+ },
+ {
+  "key": "荐片",
+  "name": "荐片 • 磁力",
+  "type": 3,
+  "api": "csp_JianPian",
+  "verdict": "dead",
+  "detail": "www.whhyn.com:HTTP502; www.zxfmj.com:响应过短48B",
+  "candidates": [
+   "www.whhyn.com",
+   "www.zxfmj.com"
+  ]
+ },
+ {
+  "key": "New6v",
+  "name": "New6V • 磁力",
+  "type": 3,
+  "api": "csp_New6v",
+  "verdict": "alive",
+  "detail": "www.xb6v.com HTTP200 51773B",
+  "candidates": [
+   "www.xb6v.com"
+  ]
+ },
+ {
+  "key": "美剧迷",
+  "name": "美剧迷 • 磁力",
+  "type": 3,
+  "api": "csp_MeijuMi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "迅雷吧",
+  "name": "迅雷吧 • 磁力",
+  "type": 3,
+  "api": "csp_Xunlei8",
+  "verdict": "alive",
+  "detail": "xunlei8.me HTTP200 29049B",
+  "candidates": [
+   "xunlei8.me"
+  ]
+ },
+ {
+  "key": "电影港",
+  "name": "电影港 • 磁力",
+  "type": 3,
+  "api": "csp_DianYingG",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "阿里云盘",
+  "name": "阿里 • 云盘",
+  "type": 3,
+  "api": "csp_PanAli",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "夸克网盘",
+  "name": "夸克 • 网盘",
+  "type": 3,
+  "api": "csp_PanQuark",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "UC网盘",
+  "name": "UC • 网盘",
+  "type": 3,
+  "api": "csp_PanUC",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "百度网盘",
+  "name": "百度 • 网盘",
+  "type": 3,
+  "api": "csp_PanBaidu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "迅雷云盘",
+  "name": "迅雷 • 云盘",
+  "type": 3,
+  "api": "csp_PanXunlei",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "光鸭云盘",
+  "name": "光鸭 • 云盘",
+  "type": 3,
+  "api": "csp_PanGuangya",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "天翼云盘",
+  "name": "天翼 • 云盘",
+  "type": 3,
+  "api": "csp_PanTianyi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "123云盘",
+  "name": "123 • 云盘",
+  "type": 3,
+  "api": "csp_Pan123",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "百度",
+  "name": "百度",
+  "type": 1,
+  "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
+  "verdict": "alive",
+  "detail": "CMS-JSON list=20",
+  "candidates": [
+   "https://api.apibdzy.com/api.php/provide/vod?ac=list"
+  ]
+ },
+ {
+  "key": "lf_js_p2p",
+  "name": "路飞 | 磁力[js]",
+  "type": 3,
+  "api": "./lib/lf_p2p2_min.js",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_两个BT",
+  "name": "影视 | 两个BT[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.bttwo.vip HTTP200 9323B",
+  "candidates": [
+   "www.bttwo.vip",
+   "www.bttwo.net"
+  ]
+ },
+ {
+  "key": "drpy_js_4KHDR",
+  "name": "磁力 | 4KHDR[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.aliyundrive.com HTTP200 3781B",
+  "candidates": [
+   "www.4khdr.cn",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_极影网",
+  "name": "磁力 | 极影网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.jiyingw.net HTTP200 476B",
+  "candidates": [
+   "www.jiyingw.net",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_MP4US",
+  "name": "磁力 | MP4电影[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.aliyundrive.com HTTP200 3781B",
+  "candidates": [
+   "www.mp4us.com",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_电影港",
+  "name": "磁力 | 电影港[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dygang.tv HTTP200 75500B",
+  "candidates": [
+   "www.dygang.tv",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_kuba",
+  "name": "磁力 | 酷吧[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kuba222.com HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "www.kuba222.com"
+  ]
+ },
+ {
+  "key": "drpy_js_xb6v",
+  "name": "磁力 | 新版6v[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.xb6v.com HTTP200 51773B",
+  "candidates": [
+   "www.xb6v.com",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_美剧迷",
+  "name": "磁力 | 美剧迷[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.meijumi.net HTTP200 133950B",
+  "candidates": [
+   "www.meijumi.net",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_校长影视",
+  "name": "夸克 | 校长影视[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "xzys.fun HTTP200 70376B",
+  "candidates": [
+   "xzys.fun",
+   "www.aliyundrive.com",
+   "www.alipan.com",
+   "pan.quark.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_yyets",
+  "name": "夸克 | 人人影视搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "yyets.click HTTP200 3840B",
+  "candidates": [
+   "yyets.click"
+  ]
+ },
+ {
+  "key": "drpy_js_奇妙搜[夸]",
+  "name": "夸克 | 奇妙搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.magicalsearch.top:无响应",
+  "candidates": [
+   "www.magicalsearch.top"
+  ]
+ },
+ {
+  "key": "drpy_js_愛盤搜",
+  "name": "夸克 | 爱盘搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "aipanso.com HTTP200 12056B",
+  "candidates": [
+   "aipanso.com"
+  ]
+ },
+ {
+  "key": "drpy_js_趣盤搜",
+  "name": "夸克 | 趣盘搜[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "pan.funletu.com HTTP200 9189B",
+  "candidates": [
+   "v.funletu.com",
+   "pan.funletu.com"
+  ]
+ },
+ {
+  "key": "drpy_js_磁力熊[磁]",
+  "name": "磁力 | 磁力熊[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.sharenice.net HTTP200 213619B",
+  "candidates": [
+   "www.cilixiong.com",
+   "www.sharenice.net"
+  ]
+ },
+ {
+  "key": "drpy_js_6V新版[磁]",
+  "name": "磁力 | 6V新版[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.xb6v.com HTTP200 51773B",
+  "candidates": [
+   "www.xb6v.com",
+   "www.66s6.net"
+  ]
+ },
+ {
+  "key": "drpy_js_Alist",
+  "name": "网盘 | Alist[js]",
+  "type": 3,
+  "api": "./lib/alist.min.js",
+  "verdict": "alive",
+  "detail": "alist.xiaoya.pro HTTP200 80249B",
+  "candidates": [
+   "shicheng.wang",
+   "nics.eu.org",
+   "alist.xiaoya.pro",
+   "pan.ecve.cn",
+   "alist.youte.ml",
+   "al.chirmyram.com",
+   "alist.shenzjd.com",
+   "pan.jlbx.xyz"
+  ]
+ },
+ {
+  "key": "drpy_js_jsapi2",
+  "name": "影视 | 百度测试[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "vip.lz-cdn3.com HTTP403(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "vip.lz-cdn3.com"
+  ]
+ },
+ {
+  "key": "csp_Xunlei8",
+  "name": "迅雷吧",
+  "type": 3,
+  "api": "csp_Xunlei8",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "BT天堂",
+  "name": "BT天堂",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "www.bttt11.com HTTP200 5540B",
+  "candidates": [
+   "www.bttt11.com",
+   "www.bt-tt.com",
+   "www.clgod.xyz"
+  ]
+ },
+ {
+  "key": "QuarkzzV2",
+  "name": "🏆️夸克至臻┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "YYDSYS",
+  "name": "🍡多多网盘┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebShare",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "QuarkTZ",
+  "name": "✊️团长网盘┃4K弹幕",
+  "type": 3,
+  "api": "csp_PanWebTz",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "QuarkYunPan",
+  "name": "📁文件┃夸克┃资源",
+  "type": 3,
+  "api": "csp_PanQuark",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "AliYunPanV2",
+  "name": "📁文件┃阿里┃资源",
+  "type": 3,
+  "api": "csp_PanAli",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "sou4k",
+  "name": "💯搜4K丨网盘资源",
+  "type": 3,
+  "api": "csp_Sou4K",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "光鸭网盘",
+  "name": "🗂️我的丨光鸭网盘",
+  "type": 3,
+  "api": "csp_PanGuangya",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "88看球",
+  "name": "88 • 看球",
+  "type": 3,
+  "api": "csp_Sports88",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "飞球体育",
+  "name": "飞球 • 体育",
+  "type": 3,
+  "api": "csp_SportsFeiqiu",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "瓜子体育",
+  "name": "瓜子 • 体育",
+  "type": 3,
+  "api": "csp_SportsGuazi",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "咖啡体育",
+  "name": "咖啡 • 体育",
+  "type": 3,
+  "api": "csp_SportsKafei",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "球通体育",
+  "name": "球通 • 体育",
+  "type": 3,
+  "api": "csp_SportQiutong",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "lf_js_lf_live",
+  "name": "电视 | 直播[js]",
+  "type": 3,
+  "api": "./lib/lf_live_min.js",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_大米星球[V2]",
+  "name": "影视 | 大米星球[V2]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dmxq.vip HTTP200 70633B",
+  "candidates": [
+   "www.dmxq.vip",
+   "jx.xmflv.com",
+   "jx.777jiexi.com",
+   "pandown.pro",
+   "api.douban.com"
+  ]
+ },
+ {
+  "key": "drpy_js_哔哩直播",
+  "name": "弹幕 | 哔哩直播[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "live.bilibili.com HTTP200 8006B",
+  "candidates": [
+   "api.live.bilibili.com",
+   "live.bilibili.com",
+   "api.bilibili.com",
+   "www.bilibili.com"
+  ]
+ },
+ {
+  "key": "drpy_js_斗鱼直播",
+  "name": "直播 | 斗鱼[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "m.douyu.com HTTP200 61306B",
+  "candidates": [
+   "m.douyu.com",
+   "live.yj1211.work",
+   "epg.cdn.loc.cc",
+   "www.aois.eu.org",
+   "www.goodiptv.club",
+   "maomao.kandiantv.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_虎牙直播",
+  "name": "直播 | 虎牙[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.huya.com HTTP200 73765B",
+  "candidates": [
+   "www.huya.com",
+   "m.huya.com",
+   "live.yj1211.work",
+   "search.cdn.huya.com",
+   "cfss.cc",
+   "epg.cdn.loc.cc",
+   "www.aois.eu.org",
+   "www.goodiptv.club"
+  ]
+ },
+ {
+  "key": "drpy_js_310直播",
+  "name": "体育 | 310直播[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.310.tv:HTTP502",
+  "candidates": [
+   "www.310.tv"
+  ]
+ },
+ {
+  "key": "drpy_js_88看球",
+  "name": "体育 | 88看球[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.88kanqiu.bar HTTP200 149644B",
+  "candidates": [
+   "www.88kanqiu.cc",
+   "www.88kanqiu.bar"
+  ]
+ },
+ {
+  "key": "drpy_js_JRKAN直播",
+  "name": "体育 | JRKAN直播[js]",
+  "type": 3,
+  "api": "./lib/drpy.min.js",
+  "verdict": "alive",
+  "detail": "gitcode.net HTTP418(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "gitcode.net",
+   "code.gitlink.org.cn",
+   "haikuo.lanzoui.com",
+   "www.jrkankan.com"
+  ]
+ },
+ {
+  "key": "drpy_js_抓饭体育",
+  "name": "体育 | 抓饭体育[js]",
+  "type": 3,
+  "api": "./lib/drpy.min.js",
+  "verdict": "dead",
+  "detail": "www.zhuafan.xin:HTTP502; www.zhuafantiyu.co:HTTP502; m.justmi.cn:HTTP502",
+  "candidates": [
+   "www.zhuafan.xin",
+   "www.zhuafantiyu.co",
+   "m.justmi.cn",
+   "m.zhuafantiyu.co",
+   "www.justmi.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_好趣网",
+  "name": "电视 | 好趣网[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "tv.haoqu99.com HTTP200 917B",
+  "candidates": [
+   "tv.haoqu99.com",
+   "m.haoqu99.com"
+  ]
+ },
+ {
+  "key": "drpy_js_大米星球",
+  "name": "影视 | 大米星球[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.dmxq.vip HTTP200 70633B",
+  "candidates": [
+   "www.dmxq.vip"
+  ]
+ },
+ {
+  "key": "Jrsjs",
+  "name": "⚽Jrs┃球迷",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:HTTP429 | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPSConnectionPool(host='gh-proxy.net', port=443): Read timed out. (r]；首页:无响应",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "虎牙直播js",
+  "name": "🐯虎牙┃直播",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.js",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:HTTP429 | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPSConnectionPool(host='gh-proxy.net', port=443): Read timed out. (r]；首页:无响应",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.js"
+  ]
+ },
+ {
+  "key": "斗鱼js",
+  "name": "🐟斗鱼┃直播",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:HTTP429 | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPSConnectionPool(host='gh-proxy.net', port=443): Read timed out. (r]；首页:无响应",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "88js",
+  "name": "88看球",
+  "type": 3,
+  "api": "./lib/drpy.min.js",
+  "verdict": "alive",
+  "detail": "www.88kanqiu.bar HTTP200 149644B",
+  "candidates": [
+   "www.88kanqiu.cc",
+   "www.88kanqiu.bar"
+  ]
+ },
+ {
+  "key": "drpy_js_ss直播",
+  "name": "ss直播",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "api.hclyz.com:HTTP530",
+  "candidates": [
+   "api.hclyz.com"
+  ]
+ },
+ {
+  "key": "JS哔哩直播",
+  "name": "哔哩直播[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "live.bilibili.com HTTP200 8006B",
+  "candidates": [
+   "api.live.bilibili.com",
+   "live.bilibili.com",
+   "api.bilibili.com",
+   "www.bilibili.com"
+  ]
+ },
+ {
+  "key": "DRJS_虎牙",
+  "name": "虎牙直播(JS)",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.huya.com HTTP200 73765B",
+  "candidates": [
+   "www.huya.com",
+   "m.huya.com",
+   "live.yj1211.work",
+   "search.cdn.huya.com",
+   "cfss.cc",
+   "epg.cdn.loc.cc",
+   "www.aois.eu.org",
+   "www.goodiptv.club"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_虎牙直播",
+  "name": "🐯虎牙直播(XYQH)",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "dead",
+  "detail": "www.goodiptv.club:无响应; live.cdn.huya.com:HTTP404; search.cdn.huya.com:响应过短22B",
+  "candidates": [
+   "www.goodiptv.club",
+   "live.cdn.huya.com",
+   "search.cdn.huya.com"
+  ]
+ },
+ {
+  "key": "咖啡",
+  "name": "⚽咖啡丨体育直播",
+  "type": 3,
+  "api": "csp_SportsKafei",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "红果短剧",
+  "name": "红果 • 短剧",
+  "type": 3,
+  "api": "./py/红果短剧.py",
+  "verdict": "alive",
+  "detail": "hongguoduanju.com HTTP200 191961B",
+  "candidates": [
+   "hongguoduanju.com",
+   "api5-normal-sinfonlineb.fqnovel.com",
+   "novel.snssdk.com",
+   "log.snssdk.com",
+   "api5-normal-lq.fqnovel.com"
+  ]
+ },
+ {
+  "key": "七猫短剧",
+  "name": "七猫 • 短剧",
+  "type": 3,
+  "api": "csp_ShortQimao",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "河马短剧",
+  "name": "河马 • 短剧",
+  "type": 3,
+  "api": "csp_ShortHema",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "围观短剧",
+  "name": "围观 • 短剧",
+  "type": 3,
+  "api": "csp_ShortWeiguan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "好看短剧",
+  "name": "好看 • 短剧",
+  "type": 3,
+  "api": "csp_ShortHaokan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "星芽短剧",
+  "name": "星芽 • 短剧",
+  "type": 3,
+  "api": "csp_ShortXingya",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "果果短剧",
+  "name": "果果 • 短剧",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "www.mochadj.com HTTP200 113341B",
+  "candidates": [
+   "www.mochadj.com"
+  ]
+ },
+ {
+  "key": "csp_Bili短剧",
+  "name": "🐞哔哩短剧",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "csp_XYQHiker_爱你短剧",
+  "name": "爱你短剧",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "dead",
+  "detail": "ainidj.com:无响应",
+  "candidates": [
+   "ainidj.com"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_河马短剧",
+  "name": "河马短剧",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "alive",
+  "detail": "www.kuaikaw.cn HTTP200 161805B",
+  "candidates": [
+   "www.kuaikaw.cn"
+  ]
+ },
+ {
+  "key": "csp_XYQHiker_短剧屋",
+  "name": "短剧屋",
+  "type": 3,
+  "api": "csp_XYQHiker",
+  "verdict": "dead",
+  "detail": "www.metaysw.com:HTTP502; live.52sf.ga:HTTP502; play.peizq.online:HTTP502",
+  "candidates": [
+   "www.metaysw.com",
+   "live.52sf.ga",
+   "play.peizq.online"
+  ]
+ },
+ {
+  "key": "偷乐短剧",
+  "name": "🤣偷乐┃短剧┃热推",
+  "type": 3,
+  "api": "http://我不是.摸鱼儿.top/py/偷乐短剧.py",
+  "verdict": "dead",
+  "detail": "接口失效[ac=list:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea | ac=detail&wd=%E6%B5%8B%E8%AF%95:ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=54251): Read timed out. (rea]；首页:无响应",
+  "candidates": [
+   "http://我不是.摸鱼儿.top/py/偷乐短剧.py"
+  ]
+ },
+ {
+  "key": "听友听书",
+  "name": "听友 • 听书",
+  "type": 3,
+  "api": "csp_TingTingyou",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "世界听书",
+  "name": "世界 • 听书",
+  "type": 3,
+  "api": "./py/世界听书.py",
+  "verdict": "dead",
+  "detail": "api.365ting.com:HTTP404; app.365ting.com:HTTP500",
+  "candidates": [
+   "api.365ting.com",
+   "app.365ting.com"
+  ]
+ },
+ {
+  "key": "堇夏听书",
+  "name": "堇夏 • 听书",
+  "type": 3,
+  "api": "csp_TingJinxia",
+  "verdict": "alive",
+  "detail": "m.ting15.com HTTP200 10489B",
+  "candidates": [
+   "m.ting15.com"
+  ]
+ },
+ {
+  "key": "博看听书",
+  "name": "博看 • 听书",
+  "type": 3,
+  "api": "csp_TingBokan",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "戏曲多多",
+  "name": "戏曲 • 多多",
+  "type": 3,
+  "api": "csp_AppLY",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩哔哩音乐",
+  "name": "哔哩 • 音乐",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩哔哩听书",
+  "name": "哔哩 • 听书",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩哔哩相声",
+  "name": "哔哩 • 相声",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "哔哩哔哩戏曲",
+  "name": "哔哩 • 戏曲",
+  "type": 3,
+  "api": "csp_Bili",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_A8音乐",
+  "name": "音频 • A8音乐",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "v.a8.com HTTP200 156520B",
+  "candidates": [
+   "v.a8.com"
+  ]
+ },
+ {
+  "key": "drpy_js_DJ音乐",
+  "name": "音频 • DJ音乐",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "gitcode.net HTTP418(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "gitcode.net",
+   "code.gitlink.org.cn",
+   "freedrpy.run.goorm.io",
+   "haikuo.lanzoui.com",
+   "www.djuu.com",
+   "mp4.djuu.com"
+  ]
+ },
+ {
+  "key": "drpy_js_蜻蜓FM",
+  "name": "广播 • 蜻蜓FM",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.qingting.fm HTTP200 73983B",
+  "candidates": [
+   "www.qingting.fm"
+  ]
+ },
+ {
+  "key": "drpy_js_爱上你听书网",
+  "name": "听书 • 爱上你听书",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.230ts.net:无响应",
+  "candidates": [
+   "www.230ts.net"
+  ]
+ },
+ {
+  "key": "drpy_js_博看听书",
+  "name": "听书 • 博看听书",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "api.bookan.com.cn:响应过短47B; es.bookan.com.cn:响应过短16B",
+  "candidates": [
+   "api.bookan.com.cn",
+   "es.bookan.com.cn"
+  ]
+ },
+ {
+  "key": "drpy_js_海洋听书",
+  "name": "听书 • 海洋听书",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "m.ychy.cc:无响应; m.ychy.com:响应过短138B",
+  "candidates": [
+   "m.ychy.cc",
+   "m.ychy.com"
+  ]
+ },
+ {
+  "key": "drpy_js_有声小说",
+  "name": "听书 • 有声小说",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "m.ysxs8.vip:无响应",
+  "candidates": [
+   "m.ysxs8.vip"
+  ]
+ },
+ {
+  "key": "酷狗",
+  "name": "音频 | 酷狗[jar]",
+  "type": 3,
+  "api": "csp_Kugou",
+  "verdict": "unknown",
+  "detail": "无硬编码域名（动态取域名/jar内置）",
+  "candidates": []
+ },
+ {
+  "key": "drpy_js_相声随身听",
+  "name": "相声 | 相声随身听[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.xsmp3.com HTTP200 23707B",
+  "candidates": [
+   "www.xsmp3.com"
+  ]
+ },
+ {
+  "key": "drpy_js_评书随身听",
+  "name": "评书 | 评书随身听[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.psmp3.com HTTP200 22357B",
+  "candidates": [
+   "www.psmp3.com"
+  ]
+ },
+ {
+  "key": "drpy_js_啦啦DJ",
+  "name": "音频 | 啦啦DJ[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.laladj.com HTTP200 3934B",
+  "candidates": [
+   "www.laladj.com"
+  ]
+ },
+ {
+  "key": "drpy_js_清风DJ",
+  "name": "音频 | 清风DJ[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.vvvdj.com:HTTP502",
+  "candidates": [
+   "www.vvvdj.com"
+  ]
+ },
+ {
+  "key": "drpy_js_广播迷FM",
+  "name": "广播 | 广播迷FM[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.guangbomi.com HTTP200 917B",
+  "candidates": [
+   "www.guangbomi.com"
+  ]
+ },
+ {
+  "key": "drpy_js_i275听书",
+  "name": "听书 | i275听书[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "m.ting275.com HTTP200 1252B",
+  "candidates": [
+   "m.ting275.com"
+  ]
+ },
+ {
+  "key": "drpy_js_六月听书",
+  "name": "听书 | 六月听书[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "m.6yueting.com:无响应; img.6yueting.com:无响应",
+  "candidates": [
+   "m.6yueting.com",
+   "img.6yueting.com"
+  ]
+ },
+ {
+  "key": "drpy_js_爱车MV",
+  "name": "MV | 爱车MV[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "dead",
+  "detail": "www.ichemv.com:HTTP503",
+  "candidates": [
+   "www.ichemv.com"
+  ]
+ },
+ {
+  "key": "drpy_js_酷奇MV",
+  "name": "MV | 酷奇[js]",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "www.kuqimv.com HTTP200 1771B",
+  "candidates": [
+   "www.kuqimv.com"
+  ]
+ },
+ {
+  "key": "酷奇",
+  "name": "🎤酷奇┃MV",
+  "type": 3,
+  "api": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:HTTP429 | ac=detail&wd=%E6%B5%8B%E8%AF%95:HTTP429]；首页:HTTP429(反爬/Cookie墙，站点活着)",
+  "candidates": [
+   "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js"
+  ]
+ },
+ {
+  "key": "相声",
+  "name": "相声",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "www.xsmp3.com HTTP200 23706B",
+  "candidates": [
+   "www.xsmp3.com",
+   "gd-filems.dancf.com"
+  ]
+ },
+ {
+  "key": "评书",
+  "name": "评书",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "verdict": "alive",
+  "detail": "www.psmp3.com HTTP200 22357B",
+  "candidates": [
+   "www.psmp3.com"
+  ]
+ },
+ {
+  "key": "kwms",
+  "name": "🎶裤硪丨音乐合集",
+  "type": 3,
+  "api": "https://wget.la/raw.githubusercontent.com/tushen6/Tomorrow/master/py/kuwo.py",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:非预期'from base.spider import Spider' | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期'from base.spider import Spider']；首页:HTTP200 527B",
+  "candidates": [
+   "https://wget.la/raw.githubusercontent.com/tushen6/Tomorrow/master/py/kuwo.py"
+  ]
+ },
+ {
+  "key": "音乐",
+  "name": "🎶听海丨音乐合集",
+  "type": 3,
+  "api": "https://wget.la/raw.githubusercontent.com/tushen6/Tomorrow/master/JS/tinghai.js",
+  "verdict": "alive",
+  "detail": "接口失效[ac=list:非预期\"let siteName = '听海',\\n    siteK\" | ac=detail&wd=%E6%B5%8B%E8%AF%95:非预期\"let siteName = '听海',\\n    siteK\"]；首页:HTTP200 527B",
+  "candidates": [
+   "https://wget.la/raw.githubusercontent.com/tushen6/Tomorrow/master/JS/tinghai.js"
+  ]
+ }
+]
