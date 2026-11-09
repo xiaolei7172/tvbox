@@ -126,6 +126,10 @@ jobs:
           name: fty-output
         continue-on-error: true
 
+      # 重新生成合并配置：jar 若被上游更新，白名单会自动跟着 dex 重新提取
+      - name: Merge config
+        run: python tools/merge_config.py
+
       # 提交前自检：spider MD5、JSON 合法性、本地引用完整性。
       # 发现 P0 问题则中止，不把坏数据推上去。
       - name: Health check
