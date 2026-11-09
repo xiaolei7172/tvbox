@@ -23,6 +23,9 @@ jar/fan.txt      -text -diff
 lib/*.gz         -text -diff
 lib/geoip.dat.gz -text -diff
 
+# ── 例外：源黑名单是需要逐行 diff 的清单 ─────────────────────
+tools/blocklist.txt  -text diff
+
 # ── 直播源：体积大、变动频繁，不参与 diff 统计 ───────────────
 *.m3u   -diff linguist-vendored
 *.txt   -diff linguist-vendored
