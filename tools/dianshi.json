@@ -1,7 +1,7 @@
 {
-"spider":"./jar/spider.jar;md5;c6985455e2cf0029e7901288a84f1e81",
+"spider":"./jar/spider.jar;md5;2fe5d9e9b6a9cb76f1d1dd3d8b68290d",
 "lives":[
-    {"name":"live","boot": false,"type":0,"url":"./tv.txt","playerType":2,"ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.cdn.loc.cc/?ch={name}&date={date}","logo":"https://logo.wyfc.qzz.io/{name}.png"}
+    {"name":"live","boot": false,"type":0,"url": "./tvboxtv.txt","playerType":2,"ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.cdn.loc.cc/?ch={name}&date={date}","logo":"https://logo.wyfc.qzz.io/{name}.png"}
 ],
 "wallpaper":"https://wallpaper-1tg.pages.dev/",
 "danmaku": "http://127.0.0.1:9978/proxy?do=danmaku&name={name}&episode={episode}",

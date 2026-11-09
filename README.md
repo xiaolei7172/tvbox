@@ -1,4 +1,113 @@
-OK影视、TVBox、猫影视配置文件。所有资源均来自于各路大神无私分享，如有侵权，请联系删除。
+# TvBox / OK影视 配置仓库
+
+OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大神无私分享。
+
+> 本仓库为 [`qist/tvbox`](https://github.com/qist/tvbox) 的镜像分支，用于个人自用与配置归档。
+> 上游原始说明（APP 推荐、网盘授权、各路大佬配置地址）已完整保留在 [docs/上游说明存档.md](docs/上游说明存档.md)。
+
+---
+
+## 快速开始
+
+在 OK影视 / TVBox 的「配置地址」中填入以下任一地址（`<user>` 替换为 `xiaolei7172`）：
+
+| 需求 | 配置地址 | 点播源 | 直播 | 说明 |
+|---|---|---:|---:|---|
+| **电视首选** | `https://raw.githubusercontent.com/<user>/tvbox/master/jsm.json` | 158 | 3 | 家庭电视适用，已删 YouTube 直播 |
+| 手机 / 综合 | `https://raw.githubusercontent.com/<user>/tvbox/master/dianshi.json` | 159 | 1 | 电视端 + 自定义 app_sites |
+| 大而全 | `https://raw.githubusercontent.com/<user>/tvbox/master/0821.json` | 86 | 16 | 饭太硬底包 + 多直播线路 |
+| 极简 | `https://raw.githubusercontent.com/<user>/tvbox/master/0827.json` | 33 | 0 | 仅 fongmi jar，启动快 |
+| JS 规则为主 | `https://raw.githubusercontent.com/<user>/tvbox/master/js.json` | 298 | 2 | drpy2 全量 JS 源 |
+| 潇洒接口 | `https://raw.githubusercontent.com/<user>/tvbox/master/xiaosa/api.json` | 112 | 1 | 上游自动更新 |
+
+**GitHub 访问慢**时，在地址前加代理前缀（任选一个）：
+
+```
+https://gh-proxy.net/
+https://github.moeyy.xyz/
+https://gh-proxy.com/
+https://ghproxy.net/
+```
+
+例：`https://gh-proxy.net/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json`
+
+---
+
+## 仓库地图
+
+```
+.
+├── *.json                 顶层配置（对外订阅入口，勿移动/改名）
+├── *.m3u / *.txt          直播源（见下表）
+├── jar/                   spider 包（fan.txt 实为 jar，仅改扩展名绕 MIME 检查）
+├── js/                    drpy2 JS 规则
+├── lib/                   解析引擎 + 代理内核 + token.json（密钥配置）
+├── json/                  站点规则集（网盘 / 磁力 / 各类 API）
+├── py/                    PY 源（TVBox Python 支持）
+├── FTY/                   饭太硬 EXT 扩展
+├── XBPQ/                  小米小爆脾气源
+├── XYQHiker/              香雅情 Hiker 规则
+├── XYQBiu/                香雅情 BIU 规则
+├── biliext/               B 站扩展（含课堂、少儿教育）
+├── cat/                   猫影视 CatVodOpen 整套规则 + dist 构建产物
+├── xiaosa/                潇洒接口完整镜像（有独立对外 URL）
+├── live/                  省级运营商 IPTV 源
+├── tools/                 ★ 自动更新流水线与自检工具
+├── archive/               已停用资源归档
+└── docs/                  文档
+```
+
+### 直播源
+
+| 文件 | 频道数 | 体积 | 类型 |
+|---|---:|---:|---|
+| `list.m3u` | 824 | 88 KB | m3u，轻量 |
+| `listx.m3u` | 25,821 | 6.1 MB | m3u，全量（低配盒子慎用） |
+| `livex.m3u` | 14,651 | 1.0 MB | m3u |
+| `radio.m3u` | 1,478 | 160 KB | 电台 |
+| `tvboxtv.txt` | — | 152 KB | TVBox type-0（默认直播源） |
+| `tvlive.txt` / `zb.txt` | — | 156 / 232 KB | TVBox type-0 |
+
+---
+
+## 维护
+
+### 自动更新
+
+`.github/workflows/run.yml` 每日 05:20（UTC）拉取上游源并重写以下文件：
+
+`dianshi.json` · `jsm.json` · `fty.json` · `jar/fan.txt` · `jar/spider.jar` · `FTY/` · `xiaosa/`
+
+**fork 后需手动启用**：`Settings → Actions → General → Allow all actions and reusable workflows`。
+未启用时每日更新不会执行。
+
+也可在 `Actions → Update xiaosa → Run workflow` 手动触发。
+
+### 自检
+
+```bash
+python tools/check_health.py            # 人类可读报告
+python tools/check_health.py --json     # JSON 输出
+```
+
+检查 9 项：JSON 合法性（区分 JSONC）、配置结构、本地引用断链、spider MD5 一致性、
+重复文件、敏感凭证、文件名风险、Python 语法、体积分布。退出码非 0 表示存在 P0 问题，
+可直接接入 CI。
+
+### 已知状态
+
+- 12 个本地 spider 的 MD5 声明与 jar 实际值 **全部一致**
+- 8 处站点 `ext` 引用的规则文件在上游即缺失（`lib/wogg.json`、`lib/wog.json`、`js/西门[V2].js`），
+  对应站点会降级为无筛选状态
+- 在线源失效率约 35%（抽样 70 个高频 URL），属 TVBox 源常态
+
+完整体检结论见 [docs/体检报告.md](docs/体检报告.md)。
+
+---
+
+## 免责声明
+
+所有资源均来自于各路大神无私分享，如有侵权，请联系删除。
 
 所有以任何方式查看本仓库内容的人、或直接或间接使用本仓库内容的使用者都应仔细阅读此声明。本仓库管理者保留随时更改或补充此免责声明的权利。一旦使用、复制、修改了本仓库内容，则视为您已接受此免责声明。
 
@@ -8,123 +117,10 @@ OK影视、TVBox、猫影视配置文件。所有资源均来自于各路大神�
 
 所有直接或间接使用本仓库内容的个人和组织，应 24 小时内完成学习和研究，并及时删除本仓库内容。如对本仓库内容的功能有需求，应自行开发相关功能。所有基于本仓库内容的源代码，进行的任何修改，为其他个人或组织的自发行为，与本仓库内容没有任何直接或间接的关系，所造成的一切后果亦与本仓库内容和本仓库管理者无关。
 
-1. tvbox配置：
+---
 
-（1）0707.json  OK影视多线配置接口,仅适用于Fengmi影视；
+## 致谢
 
-（2）0821.json  大而全的配置，在饭太硬配置的基础上添加了若干优质点播源、直播线路和解析；
+上游：[qist/tvbox](https://github.com/qist/tvbox)（12.7k stars）
 
-（3）0822.json  极简配置，OK大佬的jar，还包括几条路飞、俊于的源。
-
-（4）0825.json  小而精的配置，jar包来源于Panda Groove的go包，其中泥巴、星星等，需要替换成自己的代理url；
-
-（5）0826.json  完全来源于饭太硬的jar包和配置；
-
-（6）0827.json  jar包和配置来源于fongmi；
-
-（7）0828.json  jar包和配置来源于唐三；
-
-（8）js.json  jar包来源于Panda Groove的go包，资源来源于道长drpy(js)仓库 添加 YouTube 直播；
-
-（9）XBPQ.json  XBPQ源，jar包和配置来源于小米小爆脾气；
-
-（10）XYQ.json  XYQ源，jar包和配置来源于香雅情；
-
-（11）cat.json  cat源，资源来源于网络各路大佬。/cat/js配合猫影视可直接食用；
-
-（12） jsm.json 来自js.json + 0826.json 合集 家庭电视可用 删除YouTube 直播，OK影视 可用 电视建议使用OK影视 https://github.com/FongMi/Release 支持多直播选择。
- 
-
-猫影视使用github 配置
-
- 配置教程：<https://omii.top/1296.html>
-
-`注意使用Gitee或Github导入，并设置为私有仓库，CatVodOpen仅支持私有仓库跟dav`
-
-V1.1.3版本以上
-
-`github://Token@github.com/xxxxx/tvbox/dist/index.js.md5`
-
-改动
-
-* quickjs改为nodejs，proxy设置修改
-* 在ios上无法使用local，使用db替换local所有方法
-* nodejs 的优势在于更加灵活
-
-V1.1.2版本以下
-
-`github://Token@gitee.com/xxxxx/tvbox/js/open_config.json`
-
-1. APP推荐:
-
-（1）OK影视版本  项目地址：<https://github.com/FongMi/TV> 支持直播多线路、自动换源、直播倍速，手机投屏；
-
-（2）q215613905版本  项目地址：<https://github.com/q215613905/TVBoxOS> 支持直播回放；
-
-（3）takagen99版本  项目地址：<https://github.com/takagen99/Box> 支持直播回放，界面美观；
-
-（4）皮皮虾版本  发布频道：<https://t.me/pipixiawerun> 支持直播回放，支持弹幕；
-
-（5）新版猫影视   项目地址：<https://github.com/catvod/CatVodOpen> 界面简洁，支持多平台。
-
-（6）手机版本  项目地址：<https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile> 竖屏
-
-（7）q215613905 takagen99 编译apk 项目地址：https://github.com/o0HalfLife0o/TVBoxOSC
-
-3. TVBox各路大佬配置（排名不分先后）：
-
-（1）饭太硬：http://www.饭太硬.top/tv/
-
-（2）okjack：https://jihulab.com/okcaptain/kko/raw/main/ok.txt
-
-（3）王二小放牛娃：http://tvbox.王二小放牛娃.xyz
-
-（4）摸鱼儿：http://我不是.摸鱼儿.top
-
-（5）霜辉月明py：https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json
-
-（6）小米小爆脾气：http://xhww.fun/小米/DEMO.json
-
-（7）南风：https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json
-
-（8）神器：https://神器每日推送.tk/pz.json
-
-（9）巧技：http://pandown.pro/tvbox/tvbox.json
-
-（10）Ray：https://100km.top/0
-
-（11）俊于：http://home.jundie.top:81/top98.json
-
-（12）橘子柚：https://raw.githubusercontent.com/hackyjso/box/main/jzy.txt
-
-（13）电视（自用）： <https://raw.githubusercontent.com/qist/tvbox/master/jsm.json>
-
-（14）github代理地址： `https://github.moeyy.xyz https://mirror.ghproxy.com/ https://gh-proxy.com https://ghproxy.net` 选择一个速度快使用
-
-（15） 还可以使用域名: `https://qist.wyfc.qzz.io/jsm.json` cloudflare Pages 构建
- 
-（16） 添加潇洒 接口： https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json 或者 https://qist.wyfc.qzz.io/xiaosa/api.json
- 
-（17）添加饭太硬 接口 https://raw.githubusercontent.com/qist/tvbox/master/fty.json 或者 https://qist.wyfc.qzz.io/fty.json
-
-2. 网盘授权配置：
-选择 《 配置 | 中心 》进行配置
-特别警告：据传阿里要求使用者不得使用多线程加速方式使用阿里云盘资源，若并发连接数超过10有可能导致被限制访问或封禁帐号的处理，所以下方线程限制设置超过10所需承担的风险请使用者自行斟酌。
-
-特别警告2：迅雷云盘限制极为严格，不要尝试单token多用户异地使用，或多线程使用，随时可能封号。
-
-可以透过配置中的“网盘及弹幕配置”的视频源来实现快捷方便的获取32位token及opentoken的功能。在“网盘及弹幕配置”中扫过任何一个OpenToken后，会自动激活“转存原画”功能
-
-提示：如果遇到极速GO原画反复快速报错，不一定是被封号，可尝试杀掉播放器重启，或重启整个播放设备解决。
-
-提示2：如果遇到“转存原画”速度被限制在2M左右，那麽请尝试在阿里云盘APP里退出登录，然后重新登录，然后删除播放设备SD卡的TV目
-
-
-自用仓库，如果喜欢，请Fork自用，谢谢！
-
-尽自己所能更新，不保证配置的有效性和时效性。
-
-一定要给app 存储权限不然认证会丢失不能写盘的
-### Star
-
-[![Star History Chart](https://star-history.dera.page/svg?repos=qist/tvbox&type=Date)](https://star-history.dera.page/#qist/tvbox&Date)
+各路配置作者：饭太硬、okjack、王二小放牛娃、摸鱼儿、霜辉月明(py)、小米小爆脾气、南风、巧技、Ray、俊于、橘子柚、香雅情、潇洒、fongmi、唐三、Panda Groove、道长(drpy) 等（排名不分先后，完整清单见 [docs/上游说明存档.md](docs/上游说明存档.md)）。

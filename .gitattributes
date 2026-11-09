@@ -1,0 +1,42 @@
+# ⚠️ 本仓库刻意【不启用】全局 text=auto 行尾自动转换。
+#
+# 原因：仓库内存在「扩展名与真实类型不符」的二进制文件，
+# 例如 jar/fan.txt 实为 ZIP/JAR 包，lib/*.md5 为纯文本但相邻文件是二进制。
+# 若启用自动转换，Git 会把这些文件当文本处理，导致内容损坏。
+# 同时，对上千个配置做一次性行尾规范化会产生无意义的整文件 diff。
+
+# ── 二进制：禁止任何转换与文本 diff ──────────────────────────
+*.jar   binary
+*.gz    binary
+*.ico   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.apk   binary
+*.so    binary
+*.dex   binary
+
+# ── 伪装成文本的二进制：保持原样，禁止转换 ───────────────────
+# jar/fan.txt 是 JAR 包（PK 头），改行尾会破坏 ZIP 结构
+jar/fan.txt      -text -diff
+lib/*.gz         -text -diff
+lib/geoip.dat.gz -text -diff
+
+# ── 直播源：体积大、变动频繁，不参与 diff 统计 ───────────────
+*.m3u   -diff linguist-vendored
+*.txt   -diff linguist-vendored
+
+# ── 第三方引擎与打包产物：标记 vendored，不计入语言统计 ──────
+lib/*.js           linguist-vendored
+cat/dist/**        linguist-vendored
+cat/18_dist/**     linguist-vendored
+xiaosa/js/*.min.js linguist-vendored
+FTY/*.min.js       linguist-vendored
+
+# ── 已知大小写冲突：仅 Linux/macOS 可正常检出 ────────────────
+# Windows(NTFS) 与 macOS(APFS 默认) 对下列同名文件只保留一个，
+# 且在 Windows 上 git checkout 这两个文件会互相覆盖内容。
+# 提交前务必确认它们不在暂存区：
+#   cat/js/AppYsV2.js   vs  cat/js/appysv2.js
+#   js/LIBVIO.js        vs  js/libvio.js

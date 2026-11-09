@@ -1,4 +1,5 @@
-name: Update xiaosa
+name: Update sources
+
 on:
   workflow_dispatch:
   schedule:
@@ -8,42 +9,47 @@ on:
       - master
     paths:
       - "tools/**"
+
+# 同一时间只允许一个更新任务，避免并发提交互相覆盖
+concurrency:
+  group: update-sources
+  cancel-in-progress: true
+
+# 显式声明写入权限：新仓库默认 token 为只读，否则 push 会 403
+permissions:
+  contents: write
+
 jobs:
   xiaosa:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - name: Checkout the branch
+      - name: Checkout
         uses: actions/checkout@v7
 
-      # - name: wget the xiaosa
-      #   run: |
-      #      pwd
-      #      cd xiaosa/
-      #      wget https://raw.githubusercontent.com/PizazzGY/NewTVBox/main/local/%E5%8D%95%E7%BA%BF%E8%B7%AF.zip -O xiaosa.zip
-      #      unzip xiaosa.zip
-      #      \cp -pdr TVBoxOSC/tvbox/* ./
-      #      rm -rf xiaosa.zip TVBoxOSC
-      #      cd ../
-      #   shell: bash
-      - name: xiaosa tools
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install demjson3 pycryptodome requests
+
+      - name: Build xiaosa
+        working-directory: tools
         run: |
-          pwd
-          cd tools/
-          pip install demjson3 pycryptodome requests --break-system-packages
+          set -e
           python tvbox.py https://9877.kstore.space/sun.json xs.json dec
           python build_local.py xs.json output
-          \cp -pdr output/* ../xiaosa/
+          cp -pdr output/* ../xiaosa/
           python xiao.py ./output/api.json dianshi.json
           python xiao.py ./output/api.json jsm.json
           python copy_xbpq.py ./output/api.json
-          \cp -pdr dianshi_with_app_sites.json ../dianshi.json
-          \cp -pdr jsm_with_app_sites.json ../jsm.json
-          \cp -pdr ./output/spider.jar ../jar/spider.jar
+          cp -pdr dianshi_with_app_sites.json ../dianshi.json
+          cp -pdr jsm_with_app_sites.json ../jsm.json
+          cp -pdr ./output/spider.jar ../jar/spider.jar
           rm -rf dianshi_with_app_sites.json jsm_with_app_sites.json output xs.json
-          cd ../
-        shell: bash
-      - name: Upload xiaosa artifacts
+
+      - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
           name: xiaosa-output
@@ -57,30 +63,35 @@ jobs:
             json/
             py/
             js/
+          retention-days: 3
 
   fty:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - name: Checkout the branch
+      - name: Checkout
         uses: actions/checkout@v7
 
-      - name: fty tools
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install demjson3 pycryptodome requests
+
+      - name: Build fty
+        working-directory: tools
         run: |
-          pwd
-          cd tools/
-          pip install demjson3 pycryptodome requests --break-system-packages
+          set -e
           python tvbox.py https://www.xn--sss604efuw.net/tv ty.json dec
           python fty.py ty.json
-          # python fty.py
-          \cp -pdr tvbox_cleaned.json ../fty.json
-          \cp -pdr fan.txt ../jar/fan.txt
+          cp -pdr tvbox_cleaned.json ../fty.json
+          cp -pdr fan.txt ../jar/fan.txt
           git clone --depth=1 --recursive https://github.com/fantaiying7/EXT.git
-          \cp -pdr EXT/* ../FTY/
+          cp -pdr EXT/* ../FTY/
           rm -rf tvbox_cleaned.json fan.txt EXT ty.json
-          cd ../
-        shell: bash
-      - name: Upload fty artifacts
+
+      - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
           name: fty-output
@@ -88,14 +99,20 @@ jobs:
             fty.json
             jar/fan.txt
             FTY/
+          retention-days: 3
 
-  git-push:
+  verify-and-push:
     needs: [xiaosa, fty]
     runs-on: ubuntu-latest
     if: always()
     steps:
-      - name: Checkout the branch
+      - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
 
       - name: Download xiaosa artifacts
         uses: actions/download-artifact@v8
@@ -109,14 +126,40 @@ jobs:
           name: fty-output
         continue-on-error: true
 
-      - name: Git push assets to "release" branch
+      # 提交前自检：spider MD5、JSON 合法性、本地引用完整性。
+      # 发现 P0 问题则中止，不把坏数据推上去。
+      - name: Health check
+        id: health
+        run: |
+          python tools/check_health.py --no-secret --json > /tmp/health.json || true
+          python - <<'PY'
+          import json, sys
+          r = json.load(open("/tmp/health.json", encoding="utf-8"))
+          p0 = r.get("p0", [])
+          print("P0:", p0 or "无")
+          if p0:
+              print("::warning::体检发现 P0 问题，已阻止提交")
+              sys.exit(1)
+          PY
+
+      - name: Commit and push
+        if: steps.health.outcome == 'success'
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          if ! git diff-index --quiet HEAD --; then
-            git commit -m "更新源 $(date +%Y%m%d%H%M)"
-            git push -f origin master
-          else
-            echo "没有文件更新，不执行 git push"
+          git add -A
+          if git diff-index --quiet HEAD --; then
+            echo "无文件变更，跳过提交"
+            exit 0
           fi
+          git commit -m "更新源 $(date +%Y%m%d%H%M)"
+          # 先 rebase 再推送，避免强推抹掉手动提交
+          git pull --rebase --autostash origin master
+          git push origin master
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::自动更新失败，请检查上游源是否可用"
+          echo "  https://9877.kstore.space/sun.json"
+          echo "  https://www.xn--sss604efuw.net/tv"
