@@ -1,0 +1,44 @@
+{
+  "urls": [
+    {
+      "name": "🚀 全量合并 · 493 站（推荐）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json"
+    },
+    {
+      "name": "📺 家庭电视 · jsm（精简，158 站）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json"
+    },
+    {
+      "name": "📱 综合线路 · dianshi（159 站 + 29 解析）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/dianshi.json"
+    },
+    {
+      "name": "🧩 JS 规则库 · js（298 站，drpy2 全量）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/js.json"
+    },
+    {
+      "name": "🎯 大而全 · 0821（多直播线路）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0821.json"
+    },
+    {
+      "name": "⚡ 极简 · 0827（33 站，启动快）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0827.json"
+    },
+    {
+      "name": "☁️ 网盘专精 · 0825（135 站）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0825.json"
+    },
+    {
+      "name": "🍚 饭太硬 · fty",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/fty.json"
+    },
+    {
+      "name": "🌊 潇洒 · xiaosa",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/xiaosa/api.json"
+    },
+    {
+      "name": "💮 香雅情 · XYQ",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/XYQ.json"
+    }
+  ]
+}
