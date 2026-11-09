@@ -1,0 +1,495 @@
+[
+  {
+    "name": "cdn.jsdmirror.com",
+    "kind": "改写",
+    "url": "https://cdn.jsdmirror.com/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://cdn.jsdmirror.com/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 0.22,
+    "ttfb": 0.14,
+    "kbps": 439.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "fastly.jsdelivr.net",
+    "kind": "改写",
+    "url": "https://fastly.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://fastly.jsdelivr.net/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 0.54,
+    "ttfb": 0.41,
+    "kbps": 177.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "jsdelivr.b-cdn.net",
+    "kind": "改写",
+    "url": "https://jsdelivr.b-cdn.net/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://jsdelivr.b-cdn.net/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 1.38,
+    "ttfb": 0.85,
+    "kbps": 69.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "gcore.jsdelivr.net",
+    "kind": "改写",
+    "url": "https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://gcore.jsdelivr.net/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 1.41,
+    "ttfb": 1.15,
+    "kbps": 68.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "ghproxy.net",
+    "kind": "前缀",
+    "url": "https://ghproxy.net/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghproxy.net/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 1.89,
+    "ttfb": 1.37,
+    "kbps": 51.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "gh-proxy.com",
+    "kind": "前缀",
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh-proxy.com/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 2.0,
+    "ttfb": 1.13,
+    "kbps": 48.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "testingcf.jsdelivr.net",
+    "kind": "改写",
+    "url": "https://testingcf.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://testingcf.jsdelivr.net/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 3.43,
+    "ttfb": 2.12,
+    "kbps": 28.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "jsd.onmicrosoft.cn",
+    "kind": "改写",
+    "url": "https://jsd.onmicrosoft.cn/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://jsd.onmicrosoft.cn/",
+    "rate": "3/3",
+    "ok": 3,
+    "median": 3.71,
+    "ttfb": 1.36,
+    "kbps": 26.0,
+    "why": "",
+    "runs": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  {
+    "name": "ghfile.geekertao.top",
+    "kind": "前缀",
+    "url": "https://ghfile.geekertao.top/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghfile.geekertao.top/",
+    "rate": "2/3",
+    "ok": 2,
+    "median": 1.75,
+    "ttfb": 1.06,
+    "kbps": 57.0,
+    "why": "偶发失败",
+    "runs": [
+      "ok",
+      "HTTP 0",
+      "ok"
+    ]
+  },
+  {
+    "name": "直连 raw",
+    "kind": "直连",
+    "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "ghfast.top",
+    "kind": "前缀",
+    "url": "https://ghfast.top/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghfast.top/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "gh-proxy.net",
+    "kind": "前缀",
+    "url": "https://gh-proxy.net/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh-proxy.net/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "非 JSON（<html><head><title>Loadi）",
+    "runs": [
+      "非 JSON（<html><head><title>Loadi）",
+      "非 JSON（<html><head><title>Loadi）",
+      "非 JSON（<html><head><title>Loadi）"
+    ]
+  },
+  {
+    "name": "github.moeyy.xyz",
+    "kind": "前缀",
+    "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://github.moeyy.xyz/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "gh.llkk.cc",
+    "kind": "前缀",
+    "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh.llkk.cc/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "ghproxy.cc",
+    "kind": "前缀",
+    "url": "https://ghproxy.cc/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghproxy.cc/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 301",
+    "runs": [
+      "HTTP 301",
+      "HTTP 301",
+      "HTTP 301"
+    ]
+  },
+  {
+    "name": "cf.ghproxy.cc",
+    "kind": "前缀",
+    "url": "https://cf.ghproxy.cc/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://cf.ghproxy.cc/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 301",
+    "runs": [
+      "HTTP 301",
+      "HTTP 301",
+      "HTTP 301"
+    ]
+  },
+  {
+    "name": "gh.xxooo.cf",
+    "kind": "前缀",
+    "url": "https://gh.xxooo.cf/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh.xxooo.cf/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "hub.gitmirror.com",
+    "kind": "前缀",
+    "url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://hub.gitmirror.com/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "ghps.cc",
+    "kind": "前缀",
+    "url": "https://ghps.cc/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghps.cc/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "非 JSON（<script>\n            fet）",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "gh.jasonzeng.dev",
+    "kind": "前缀",
+    "url": "https://gh.jasonzeng.dev/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh.jasonzeng.dev/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "ghproxy.1888866.xyz",
+    "kind": "前缀",
+    "url": "https://ghproxy.1888866.xyz/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghproxy.1888866.xyz/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 525",
+    "runs": [
+      "HTTP 525",
+      "HTTP 525",
+      "HTTP 525"
+    ]
+  },
+  {
+    "name": "ghp.arslantu.xyz",
+    "kind": "前缀",
+    "url": "https://ghp.arslantu.xyz/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghp.arslantu.xyz/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 525",
+    "runs": [
+      "HTTP 525",
+      "HTTP 525",
+      "HTTP 525"
+    ]
+  },
+  {
+    "name": "gh-proxy.top",
+    "kind": "前缀",
+    "url": "https://gh-proxy.top/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh-proxy.top/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "gh.7c7.cc",
+    "kind": "前缀",
+    "url": "https://gh.7c7.cc/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://gh.7c7.cc/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "ghproxy.cfd",
+    "kind": "前缀",
+    "url": "https://ghproxy.cfd/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghproxy.cfd/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "非 JSON（<!DOCTYPE html>\n<html la）",
+    "runs": [
+      "非 JSON（<!DOCTYPE html>\n<html la）",
+      "非 JSON（<!DOCTYPE html>\n<html la）",
+      "非 JSON（<!DOCTYPE html>\n<html la）"
+    ]
+  },
+  {
+    "name": "ghproxy.homeboyc.cn",
+    "kind": "前缀",
+    "url": "https://ghproxy.homeboyc.cn/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://ghproxy.homeboyc.cn/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 403",
+    "runs": [
+      "HTTP 403",
+      "HTTP 403",
+      "HTTP 403"
+    ]
+  },
+  {
+    "name": "cdn.jsdelivr.net",
+    "kind": "改写",
+    "url": "https://cdn.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json",
+    "prefix": "https://cdn.jsdelivr.net/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "cdn.statically.io",
+    "kind": "改写",
+    "url": "https://cdn.statically.io/gh/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://cdn.statically.io/gh/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  },
+  {
+    "name": "raw.githack.com",
+    "kind": "改写",
+    "url": "https://raw.githack.com/xiaolei7172/tvbox/master/tvbox.json",
+    "prefix": "https://raw.githack.com/",
+    "rate": "0/3",
+    "ok": 0,
+    "median": null,
+    "ttfb": null,
+    "kbps": null,
+    "why": "HTTP 0",
+    "runs": [
+      "HTTP 0",
+      "HTTP 0",
+      "HTTP 0"
+    ]
+  }
+]

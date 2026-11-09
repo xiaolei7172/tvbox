@@ -613,9 +613,23 @@ if WMZ:
     n = dump(w, os.path.join(ROOT, "tvbox-wmz.json"))
     print(f"已生成 tvbox-wmz.json  {n/1024:.1f} KB  {len(wmz_sites)} 站（jar/wmz.jar）")
 
+# ── 7.45 CDN 专用配置 tvbox-cdn.json ──────────────────────────────────────
+# 实测（2026-11-09）：jsDelivr 系镜像会把 .jar 拦成 403 Forbidden，而同目录的
+# jar/fan.txt（1.4 MB，其实也是个 jar 改名）能正常取 —— 纯粹按扩展名屏蔽，与体积无关。
+# 所以配置若直接托管在 CDN 上，spider 的 ./jar/spider.jar 会取不到，
+# 194 个 jar 内置源（csp_*）全部失效。
+# 这里单独出一份：spider 换成绝对地址、走能取 jar 的代理；其余字段完全同 tvbox.json。
+# 配置里其余相对路径（./js/…、./lib/…）照旧按配置自身地址解析，.js/.py 在 CDN 上不受限。
+RAW = "https://raw.githubusercontent.com/xiaolei7172/tvbox/master"
+CDN_JAR_BASE = "https://gh-proxy.com/" + RAW
+_cfg = json.loads(json.dumps(out, ensure_ascii=False))   # 深拷贝，不动 out
+_p = _cfg["spider"].split(";")
+_cfg["spider"] = f"{CDN_JAR_BASE}/{_p[0].lstrip('./')};" + ";".join(_p[1:])
+_n = dump(_cfg, os.path.join(ROOT, "tvbox-cdn.json"))
+print(f"已生成 tvbox-cdn.json  {_n/1024:.1f} KB（spider 走绝对地址，供 jsDelivr 等 CDN 使用）")
+
 # ── 7.5 多仓入口 repo.json ────────────────────────────────────────────────
 # TVBox / OK影视 的「多仓」格式：客户端先展示仓库列表，用户选一个进入。
-RAW = "https://raw.githubusercontent.com/xiaolei7172/tvbox/master"
 repo = {
     "urls": [
         {"name": f"🚀 全量合并 · {len(kept)} 站（推荐）", "url": f"{RAW}/tvbox.json"},

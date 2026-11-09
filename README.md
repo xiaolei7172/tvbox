@@ -9,25 +9,75 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 ## 快速开始
 
-国内网络直连 `raw.githubusercontent.com` 基本不通，**下面给的加速地址可以直接复制粘贴**。
+国内直连 `raw.githubusercontent.com` 基本不通 —— 本机实测 3 次全部超时。下面的地址都带了加速前缀，**复制即用**。
 
-### 一个地址搞定（推荐）
+排序依据：2026-11-09 对 29 个候选逐个真实拉取 `tvbox.json`（97,947 B），每个 **5 次取中位数**，
+并校验返回内容必须是合法 JSON 且站数为 434 —— 把跳转页、验证页、截断响应都判为失败。
+
+### 🏅 按速度排序（实测最快在前）
+
+测法：9 个候选**交错轮询 7 轮**（每轮把全部镜像打一遍，消除时间偏差），取下单次耗时中位数。
+单轮"先测谁后测谁"会带来 10 倍误差 —— 同一镜像先测 0.39 s、后测 3.71 s，所以必须交错。
+
+| # | 镜像 | 中位 | 波动范围 | 配套配置 | 取 jar | 标签 |
+|---|---|---|---:|---|---|---|
+| 1 | `https://cdn.jsdmirror.com/gh/xiaolei7172/tvbox@master/` | **0.35 s** | 0.18–2.07 | cdn 版 | ❌ | **优质** |
+| 2 | `https://jsd.onmicrosoft.cn/gh/xiaolei7172/tvbox@master/` | **0.53 s** | 0.17–0.65 | cdn 版 | ❌ | **优质** · 最稳 |
+| 3 | `https://fastly.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | **0.57 s** | 0.48–0.76 | cdn 版 | ❌ | **优质** |
+| 4 | `https://jsdelivr.b-cdn.net/gh/xiaolei7172/tvbox@master/` | 1.37 s | 1.24–1.42 | cdn 版 | ❌ | **优质** |
+| 5 | `https://ghproxy.net/` | 1.76 s | 1.60–1.83 | 普通版 | ✅ | **优质** · **全仓可直取** |
+| 6 | `https://testingcf.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | 1.83 s | 1.46–3.66 | cdn 版 | ❌ | 备用 |
+| 7 | `https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | 2.14 s | 1.07–5.20 | cdn 版 | ❌ | 备用 |
+| 8 | `https://ghfile.geekertao.top/` | 2.49 s | 1.54–5.36 | 普通版 | ⚠️ | **不推荐**，大文件会截断 |
+| 9 | `https://gh-proxy.com/` | 3.54 s | 1.50–6.13 | 普通版 | ✅ | 兜底 · 7 轮中 1 次失败 |
+
+**只想粘一个地址、不想管两套配置 → 用第 5 条**，它是"配置和 jar 走同一个源"里最快的一条。
+前缀式的完整地址 = 前缀 + 原始地址，例如：
 
 ```
-https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json
+https://ghproxy.net/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json
 ```
 
-想要「多仓」形式（客户端先列仓库、再点进去）填这个：
+jsDelivr 式是**整段改写**，别拼错（`/gh/用户/仓库@分支/路径`）：
 
 ```
-https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo-cn.json
+https://cdn.jsdmirror.com/gh/xiaolei7172/tvbox@master/tvbox-cdn.json
 ```
 
-### 全部配置地址
+> `ghfile.geekertao.top` 单独点名：配置拉取 2.49 s 看着不错，但第二次取 `spider.jar` 时
+> **只返回了 1,343,488 B（应为 1,937,684 B）**，即传输被截断。jar 有 md5 校验，截断的包客户端直接拒绝加载，
+> 表现就是"配置能进、点开全报错"。这类镜像不能用。
+
+
+### ⚠️ 用 CDN 地址必须配 `tvbox-cdn.json`
+
+`tvbox.json` 和 `tvbox-cdn.json` **只差一个字段**，不能混用：
+
+| 配置 | spider 写法 | 适用于 |
+|---|---|---|
+| `tvbox.json` | `./jar/spider.jar;md5;…`（相对路径） | gh-proxy 这类**全路径透传**的代理 |
+| `tvbox-cdn.json` | `https://gh-proxy.com/https://raw.githubusercontent.com/…/jar/spider.jar;md5;…`（绝对地址） | jsDelivr 这类 **CDN** |
+
+原因是实测出来的一个硬限制：**jsDelivr 系镜像会按扩展名把 `.jar` 拦成 `403 Forbidden`**。
+
+| 同一镜像取不同文件 | 结果 |
+|---|---|
+| `…/jar/spider.jar`（1.85 MB） | ❌ `403 Forbidden`，响应体只有 9 字节 |
+| `…/jar/fan.txt`（1.38 MB，实际也是个 jar 改名） | ✅ 200，1,411,181 B |
+| `…/js/555电影.js` | ✅ 200，7,435 B |
+
+体积不是原因，**扩展名才是**。所以配置放在 CDN 上时，相对路径的 `./jar/spider.jar` 会跟着 403，
+**194 个 jar 内置源（`csp_*`）全部失效**。`tvbox-cdn.json` 把 spider 换成绝对地址走 gh-proxy，
+其余字段与 `tvbox.json` 逐字节一致，由合并脚本自动生成，不会脱节。
+
+代价：jsDelivr 有 **12 小时左右缓存**，每日更新会滞后；要跟得最新就用第 5 条的 `gh-proxy.com`。
+
+### 全部配置地址（统一用 gh-proxy.com）
 
 | 配置 | 内容 | 国内加速地址 | 原始地址 |
 |---|---|---|---|
 | **⭐ 全量合并（推荐）** | **434** 站 · 13 直播 · 38 解析 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json) |
+| CDN 专用版 | 与上表同内容，spider 走绝对地址 | 见上方第 1–4、6–7 条（jsDelivr 前缀） | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-cdn.json) |
 | wmz 原版 | 95 站，补齐 16 个 jar 专属站（AList / 115 / 4K 网盘） | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-wmz.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-wmz.json) |
 | 多仓入口（加速版） | 11 个仓库，子地址已套加速前缀 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo-cn.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo.json) |
 | 电视首选 | jsm，158 站，已删 YouTube 直播 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json) |
@@ -35,29 +85,26 @@ https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/
 | 极简 | 0827，33 站，低配盒子启动快 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0827.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0827.json) |
 | JS 规则为主 | js.json，296 站 drpy2 全量 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/js.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/js.json) |
 
-> 加速前缀 + 原始地址是**直接拼接**：`https://gh-proxy.com/` + `https://raw.githubusercontent.com/...`。
+> 前缀式加速是**直接拼接**：`https://gh-proxy.com/` + `https://raw.githubusercontent.com/...`。
 > 配置里所有 `./js/xxx.js`、`./jar/spider.jar` 这类相对路径也会跟着走同一个前缀，代理按路径透传，取文件正常。
+>
+> jsDelivr 式是**整段改写**，别拼错：
+> `https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json`（注意是 `/gh/用户/仓库@分支/路径`，且必须配 cdn 版）。
 
-### 加速前缀实测（2026-11-09）
+### ❌ 实测不通的候选（别用）
 
-| 前缀 | 结果 | 说明 |
-|---|---|---|
-| `https://gh-proxy.com/` | ✅ 1.0 s | **首选**，直拼，无缓存，跟得上每日更新 |
-| `https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | ✅ 1.9 s | jsDelivr，**路径格式不同**（见下），有 CDN 缓存 |
-| `https://testingcf.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | ✅ 4.6 s | jsDelivr 备用节点 |
-| `https://ghproxy.net/` | ✅ 7~9 s | 能用但慢，作最后兜底 |
-| `https://gh-proxy.net/` | ❌ | 域名已被劫持，返回的是 `window.location.replace(...)` 跳转页 —— 客户端会报「配置格式错误」 |
-| `https://github.moeyy.xyz/` | ❌ | 域名已注销（NXDOMAIN） |
-| `https://raw.gitmirror.com/` · `https://ghfast.top/` · `https://cdn.jsdelivr.net/` · `https://jsd.onmicrosoft.cn/` | ❌ | 本机实测不通，不建议使用 |
+| 镜像 | 现象 |
+|---|---|
+| `raw.githubusercontent.com` 直连 | 3 次全超时（解析到的 IP 被掐） |
+| `gh-proxy.net` | 域名被劫持，返回 546 B 的 `window.location.replace(…?js=<JWT>)` 跳转页 |
+| `github.moeyy.xyz` | 域名已注销（NXDOMAIN），父域 NS 还在 |
+| `ghps.cc` | 返回注入的 `<script>` 页面，不是文件 |
+| `ghproxy.cc` · `cf.ghproxy.cc` | 301 跳转后拿不到文件 |
+| `ghproxy.1888866.xyz` · `ghp.arslantu.xyz` | HTTP 525（源站 TLS 握手失败） |
+| `ghproxy.homeboyc.cn` | HTTP 403 |
+| `ghfast.top` · `gh.llkk.cc` · `gh.xxooo.cf` · `hub.gitmirror.com` · `gh.jasonzeng.dev` · `gh-proxy.top` · `gh.7c7.cc` · `ghproxy.cfd` · `cdn.jsdelivr.net` · `cdn.statically.io` · `raw.githack.com` | 连接超时 / 无响应 |
 
-jsDelivr 是**整段改写**而不是加前缀，别拼错：
-
-```
-https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json
-https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/jsm.json
-```
-
-它会把文件缓存 12 小时左右，所以「每分钟都更新」的场景用 `gh-proxy.com`，只求稳用 jsDelivr。
+复跑测速：`python tools/bench_mirrors.py`（生成 `bench-result.json`）。
 
 **都不行就自建**：仓库里带了一份 Cloudflare Worker 代理脚本 `tools/cf-proxy-worker.js`，
 粘到 Workers 里部署，绑自己域名，然后把它当前缀用（免费额度够个人用，不怕公共加速站失效）。
@@ -101,7 +148,9 @@ https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/jsm.json
 ```
 .
 ├── tvbox.json             ⭐ 全量合并配置（434 站，推荐单地址接入）
+├── tvbox-cdn.json         CDN 专用版（spider 走绝对地址，配 jsDelivr 系用）
 ├── repo-cn.json           多仓入口·加速版（子地址已套 gh-proxy.com，国内可直接用）
+├── bench-result.json      镜像测速结果（tools/bench_mirrors.py 生成）
 ├── tvbox-wmz.json         wmz 原版配置（95 站，配 jar/wmz.jar）
 ├── repo.json              多仓入口（客户端显示仓库列表）
 ├── *.json                 其余独立配置（保留原有订阅地址，勿移动/改名）
@@ -131,6 +180,7 @@ https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/jsm.json
 |---|---|
 | `tools/merge_config.py` | 13 配置 + wmz → `tvbox.json` + `tvbox-wmz.json` + `repo.json` |
 | `tools/refresh_wmz.py` | 刷新 wmz 配置快照与配套 jar（`--check` 只检查不写） |
+| `tools/bench_mirrors.py` | 29 个加速镜像实测排序，校验内容后输出 `bench-result.json` |
 | `tools/check_health.py` | 9 项自检，退出码可接 CI |
 | `tools/tvbox.py` / `xiao.py` / `fty.py` / `build_local.py` | Actions 每日自动更新用 |
 
