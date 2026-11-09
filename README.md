@@ -142,7 +142,7 @@ https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/jsm.json
 | `listx.m3u` | 25,821 | 6.1 MB | m3u，全量（低配盒子慎用） |
 | `livex.m3u` | 14,651 | 1.0 MB | m3u |
 | `radio.m3u` | 1,478 | 160 KB | 电台 |
-| `tvboxtv.txt` | — | 152 KB | TVBox type-0（默认直播源） |
+| `tvboxtv.txt` | — | 152 KB | TVBox type-0，频道为 `tvlive.txt` 子集，配置里已不再单独挂载（`dianshi.json` 仍在用） |
 | `tvlive.txt` / `zb.txt` | — | 156 / 232 KB | TVBox type-0 |
 
 ---
