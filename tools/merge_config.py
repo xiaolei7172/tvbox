@@ -17,6 +17,7 @@ import re
 import sys
 import json
 from collections import Counter, OrderedDict
+from urllib.parse import unquote  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding="utf-8")
@@ -305,7 +306,34 @@ def all_sources():
         yield "wmz", WMZ
 
 
-lives, seen_live = [], set()
+LOCAL_LIVE = re.compile(r"^\./([\w\-./]+\.(?:txt|m3u))$", re.I)
+
+
+def live_urls(u):
+    """把本地直播文件读成 URL 集合，用来判断两个直播源是不是同一份列表"""
+    m = LOCAL_LIVE.match(str(u or ""))
+    if not m or not os.path.isfile(m.group(1)):
+        return None
+    urls = set()
+    try:
+        with open(m.group(1), encoding="utf-8", errors="ignore") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line or line.endswith("#genre#"):
+                    continue
+                if line.startswith("http"):
+                    urls.add(line)
+                elif "," in line and not line.startswith("#"):
+                    tail = line.rsplit(",", 1)[-1].strip()
+                    if tail.startswith("http"):
+                        urls.add(tail)
+    except OSError:
+        return None
+    return urls or None
+
+
+lives, seen_live, live_sets = [], set(), []   # live_sets: [(index, ext, urlset)]
+dropped_live = []
 for f, d in all_sources():
     for lv in d.get("lives") or []:
         if not isinstance(lv, dict):
@@ -318,11 +346,44 @@ for f, d in all_sources():
             continue
         if not resolve_ok(u):
             continue
+
+        # 同格式的本地直播源：URL 重合 ≥95% 视为同一份列表，只留频道多的那份
+        cur = live_urls(u)
+        if cur:
+            ext = os.path.splitext(u)[1].lower()
+            same = next((x for x in live_sets
+                         if x[1] == ext and len(cur & x[2]) >= 0.95 * min(len(cur), len(x[2]))), None)
+            if same:
+                idx, _, old = same
+                if len(cur) > len(old):
+                    dropped_live.append((lives[idx].get("name"), lives[idx].get("url"), u))
+                    lives[idx] = lv
+                    live_sets.remove(same)
+                    live_sets.append((idx, ext, cur))
+                    seen_live.add(n)
+                else:
+                    dropped_live.append((lv.get("name"), u, lives[idx].get("url")))
+                continue
+            live_sets.append((len(lives), ext, cur))
+
         seen_live.add(n)
         lives.append(lv)
 
+# 同名直播源加后缀区分（客户端列表靠名字区分，重名等于看不见）
+_name_cnt = Counter(str(x.get("name") or "") for x in lives)
+_seen_name = Counter()
+for lv in lives:
+    nm = str(lv.get("name") or "")
+    if _name_cnt[nm] > 1:
+        _seen_name[nm] += 1
+        tag = os.path.splitext(str(lv.get("url") or "").split("?")[0])[1].lstrip(".").upper()
+        lv["name"] = f"{nm}•{tag or _seen_name[nm]}"
+
+for a, b, keep in dropped_live:
+    print(f"  直播去重：{a} ({b}) 与 {keep} 为同一份列表，丢弃")
+
 # ── 5. 合并 parses（清洗无效项）──────────────────────────────────────────
-parses, seen_parse = [], set()
+parses, seen_parse, seen_pname = [], set(), Counter()
 for f, d in all_sources():
     for ps in d.get("parses") or []:
         if not isinstance(ps, dict):
@@ -330,13 +391,76 @@ for f, d in all_sources():
         u = str(ps.get("url") or "").strip()
         if not u or u.lower() in {"demo", "null", "none"}:
             continue
-        sig = (ps.get("name"), norm_url(u), ps.get("type"))
+        # 同一接口只留一条：名字不同（如「虾米」「-虾米-」）实为同一个 url
+        sig = (norm_url(u), ps.get("type"))
         if sig in seen_parse:
             continue
         seen_parse.add(sig)
+        nm = str(ps.get("name") or "")
+        seen_pname[nm] += 1
+        if seen_pname[nm] > 1:      # 同名不同接口，加序号避免客户端里认不出
+            ps["name"] = f"{nm}{seen_pname[nm]}"
         parses.append(ps)
 
 print(f"直播源 {len(lives)} 个，解析 {len(parses)} 个")
+
+# ── 5.4 失效加速站本地化 ──────────────────────────────────────────────────
+# gh-proxy.net 已被劫持：返回的是「window.location.replace(...)」跳转页而不是文件内容；
+# github.moeyy.xyz 已无 DNS 记录（NXDOMAIN）。
+# 这几个站点的 api（drpy2 引擎）和 ext（规则）都挂在这两个域名上，整条链路是断的，
+# 在电视上表现为「点开就报错 / 一直转圈」。改成仓库自带的 lib/ 引擎 + 本地规则文件。
+DEAD_PROXY = ("https://gh-proxy.net/", "https://github.moeyy.xyz/")
+LOCAL_RULE = {
+    # 仓库里本来就有的同名规则（FTY / js），直接指向它们，不重复上架
+    "有声小说吧.js": "FTY/有声小说吧.js",
+    "兔小贝.js":     "FTY/兔小贝.js",
+    "jrk.js":        "FTY/jrk.js",
+    "斗鱼直播.js":    "FTY/斗鱼直播.js",
+    "酷奇MV.js":      "js/酷奇MV.js",
+    "去看吧.js":      "js/去看吧.js",
+    # 上游这份是 **base64 混淆的，这里放了明文版本，兼容性最好
+    "huya2.js":      "js/ext/huya2.js",
+}
+_relocalized, _leftover = 0, []
+for s in kept:
+    hit = False
+    for field in ("api", "ext"):
+        v = s.get(field)
+        if not (isinstance(v, str) and v.startswith(DEAD_PROXY)):
+            continue
+        fname = unquote(v.rsplit("/", 1)[-1])
+        if field == "api":
+            s[field] = "./lib/drpy2.js" if fname == "drpy2.js" else "./lib/drpy2.min.js"
+            hit = True
+        else:
+            rel = LOCAL_RULE.get(fname)
+            if rel and os.path.isfile(rel):
+                s[field] = "./" + rel
+                hit = True
+            else:
+                _leftover.append((s.get("name"), v))
+    if hit:
+        _relocalized += 1
+
+if _relocalized:
+    print(f"本地化 {_relocalized} 个站点：失效加速站的引擎/规则 → ./lib + ./js")
+for n, u in _leftover:
+    print(f"  ! 未本地化（缺规则文件）：{n} → {u[:70]}")
+
+# 本地化之后，原本「远程地址不同、实际是同一份规则」的站点会合并成同一条，
+# 这里再按 (api, ext) 去一次重，避免列表里出现两个一模一样的小图标。
+_sig, _uniq, _merged = set(), [], []
+for s in kept:
+    k = (json.dumps(s.get("api"), sort_keys=True, ensure_ascii=False),
+         json.dumps(s.get("ext"), sort_keys=True, ensure_ascii=False))
+    if k in _sig:
+        _merged.append(s.get("name"))
+        continue
+    _sig.add(k)
+    _uniq.append(s)
+if _merged:
+    kept = _uniq
+    print(f"规则同源合并 −{len(_merged)}：{'、'.join(str(x) for x in _merged)}")
 
 # ── 5.5 站点分组排序 ──────────────────────────────────────────────────────
 # 客户端按 sites 数组顺序渲染列表，排序直接决定观感。
@@ -371,7 +495,32 @@ gstat = Counter(group_of(s)[1] for s in kept)
 order = ["工具箱", "影视", "APP", "网盘", "直播", "短剧", "听书"]
 print("站点分组：" + "  ".join(f"{g}={gstat[g]}" for g in order if gstat[g]))
 
-# ── 6. 组装 ───────────────────────────────────────────────────────────────
+# ── 6. 组装（顶层数组统一去重，国内 DoH 前置）─────────────────────────────
+def dedup(items, keyfn):
+    """保持原顺序去重，返回 (结果, 去掉的条数)"""
+    seen, out_ = set(), []
+    for it in items:
+        k = keyfn(it)
+        if k in seen:
+            continue
+        seen.add(k)
+        out_.append(it)
+    return out_, len(items) - len(out_)
+
+
+def as_text(x):
+    return (x if isinstance(x, str) else json.dumps(x, ensure_ascii=False,
+                                                    sort_keys=True)).strip().lower()
+
+
+# 国内解析器放最前：原始配置里只有 Google / Cloudflare / Quad9 等境外 DoH，
+# 在国内基本连不上，DNS 解析处处超时，客户端表现为「点开一直转圈」。
+DOMESTIC_DOH = [
+    {"name": "AliDNS", "url": "https://dns.alidns.com/dns-query", "ips": ["223.5.5.5", "223.6.6.6"]},
+    {"name": "DNSPod", "url": "https://doh.pub/dns-query", "ips": ["119.29.29.29", "1.12.12.12"]},
+    {"name": "360",    "url": "https://doh.360.cn/dns-query",  "ips": ["101.226.4.6", "101.226.4.9"]},
+]
+
 out = OrderedDict()
 out["spider"] = SPIDER
 out["wallpaper"] = base.get("wallpaper", "")
@@ -379,9 +528,27 @@ out["danmaku"] = base.get("danmaku", "")
 out["sites"] = kept
 out["lives"] = lives
 out["parses"] = parses
+
+_skeleton = {}
 for k in ("hosts", "flags", "doh", "rules", "ads"):
-    if base.get(k):
-        out[k] = base[k]
+    v = base.get(k)
+    if not v:
+        continue
+    if k == "doh":
+        v = DOMESTIC_DOH + [x for x in v if isinstance(x, dict)
+                            and "alidns" not in str(x.get("url")) and "doh.pub" not in str(x.get("url"))]
+    keyfn = {
+        "hosts": lambda x: str(x).strip().lower(),
+        "flags": lambda x: str(x).strip().lower(),
+        "doh":   lambda x: str(x.get("url") if isinstance(x, dict) else x).strip().lower(),
+        "rules": lambda x: str(x.get("name") if isinstance(x, dict) else x).strip(),
+        "ads":   as_text,
+    }[k]
+    v2, cut = dedup(v, keyfn)
+    if cut:
+        print(f"  {k:<6} 去重 −{cut}（{len(v)} → {len(v2)}）")
+    out[k] = v2
+    _skeleton[k] = len(v2)
 
 # ── 7. 序列化：顶层键换行，每个站点一行，便于 diff 与人工核对 ─────────────
 def dump(obj, path):
@@ -473,6 +640,16 @@ repo_path = os.path.join(ROOT, "repo.json")
 open(repo_path, "w", encoding="utf-8", newline="\n").write(
     json.dumps(repo, ensure_ascii=False, indent=2) + "\n")
 print(f"已生成 repo.json   {len(repo['urls'])} 个仓库入口")
+
+# ── 7.6 国内加速版多仓 repo-cn.json ───────────────────────────────────────
+# 国内直连 raw.githubusercontent.com 基本不通，多仓里的每个子地址都会失败。
+# 这里把子地址统一套上加速前缀；配置内部的相对路径（./js/…）会挂到同一个
+# 前缀后面，代理按路径透传，所以依然能取到文件。
+ACCEL = "https://gh-proxy.com/"
+repo_cn = {"urls": [dict(x, url=ACCEL + x["url"]) for x in repo["urls"]]}
+open(os.path.join(ROOT, "repo-cn.json"), "w", encoding="utf-8", newline="\n").write(
+    json.dumps(repo_cn, ensure_ascii=False, indent=2) + "\n")
+print(f"已生成 repo-cn.json  加速前缀 {ACCEL}")
 
 # ── 8. 统计输出 ───────────────────────────────────────────────────────────
 print("\n站点来源统计：")

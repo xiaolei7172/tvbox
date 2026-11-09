@@ -9,19 +9,58 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 ## 快速开始
 
-在 OK影视 / TVBox 的「配置地址」中填入以下任一地址（`<user>` 替换为 `xiaolei7172`）：
+国内网络直连 `raw.githubusercontent.com` 基本不通，**下面给的加速地址可以直接复制粘贴**。
 
-| 需求 | 配置地址 | 点播源 | 直播 | 说明 |
-|---|---|---:|---:|---|
-| **⭐ 一站式（推荐）** | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox.json` | **436** | 14 | 全仓合并版，已剔除死链与重复源 |
-| wmz 原版 | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox-wmz.json` | 95 | 2 | 补齐主配置收不了的 16 个 jar 专属站（AList / 115 / 4K 网盘） |
-| 多仓入口 | `https://raw.githubusercontent.com/<user>/tvbox/master/repo.json` | — | — | 客户端显示仓库列表，自行切换 |
-| 电视首选 | `https://raw.githubusercontent.com/<user>/tvbox/master/jsm.json` | 158 | 3 | 家庭电视适用，已删 YouTube 直播 |
-| 手机 / 综合 | `https://raw.githubusercontent.com/<user>/tvbox/master/dianshi.json` | 159 | 1 | 电视端 + 自定义 app_sites |
-| 大而全 | `https://raw.githubusercontent.com/<user>/tvbox/master/0821.json` | 86 | 16 | 饭太硬底包 + 多直播线路 |
-| 极简 | `https://raw.githubusercontent.com/<user>/tvbox/master/0827.json` | 33 | 0 | 仅 fongmi jar，启动快 |
-| JS 规则为主 | `https://raw.githubusercontent.com/<user>/tvbox/master/js.json` | 296 | 2 | drpy2 全量 JS 源 |
-| 潇洒接口 | `https://raw.githubusercontent.com/<user>/tvbox/master/xiaosa/api.json` | 112 | 1 | 上游自动更新 |
+### 一个地址搞定（推荐）
+
+```
+https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json
+```
+
+想要「多仓」形式（客户端先列仓库、再点进去）填这个：
+
+```
+https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo-cn.json
+```
+
+### 全部配置地址
+
+| 配置 | 内容 | 国内加速地址 | 原始地址 |
+|---|---|---|---|
+| **⭐ 全量合并（推荐）** | **434** 站 · 13 直播 · 38 解析 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json) |
+| wmz 原版 | 95 站，补齐 16 个 jar 专属站（AList / 115 / 4K 网盘） | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-wmz.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-wmz.json) |
+| 多仓入口（加速版） | 11 个仓库，子地址已套加速前缀 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo-cn.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/repo.json) |
+| 电视首选 | jsm，158 站，已删 YouTube 直播 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/jsm.json) |
+| 手机 / 综合 | dianshi，159 站 + 29 解析 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/dianshi.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/dianshi.json) |
+| 极简 | 0827，33 站，低配盒子启动快 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0827.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/0827.json) |
+| JS 规则为主 | js.json，296 站 drpy2 全量 | `https://gh-proxy.com/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/js.json` | [raw](https://raw.githubusercontent.com/xiaolei7172/tvbox/master/js.json) |
+
+> 加速前缀 + 原始地址是**直接拼接**：`https://gh-proxy.com/` + `https://raw.githubusercontent.com/...`。
+> 配置里所有 `./js/xxx.js`、`./jar/spider.jar` 这类相对路径也会跟着走同一个前缀，代理按路径透传，取文件正常。
+
+### 加速前缀实测（2026-11-09）
+
+| 前缀 | 结果 | 说明 |
+|---|---|---|
+| `https://gh-proxy.com/` | ✅ 1.0 s | **首选**，直拼，无缓存，跟得上每日更新 |
+| `https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | ✅ 1.9 s | jsDelivr，**路径格式不同**（见下），有 CDN 缓存 |
+| `https://testingcf.jsdelivr.net/gh/xiaolei7172/tvbox@master/` | ✅ 4.6 s | jsDelivr 备用节点 |
+| `https://ghproxy.net/` | ✅ 7~9 s | 能用但慢，作最后兜底 |
+| `https://gh-proxy.net/` | ❌ | 域名已被劫持，返回的是 `window.location.replace(...)` 跳转页 —— 客户端会报「配置格式错误」 |
+| `https://github.moeyy.xyz/` | ❌ | 域名已注销（NXDOMAIN） |
+| `https://raw.gitmirror.com/` · `https://ghfast.top/` · `https://cdn.jsdelivr.net/` · `https://jsd.onmicrosoft.cn/` | ❌ | 本机实测不通，不建议使用 |
+
+jsDelivr 是**整段改写**而不是加前缀，别拼错：
+
+```
+https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/tvbox.json
+https://gcore.jsdelivr.net/gh/xiaolei7172/tvbox@master/jsm.json
+```
+
+它会把文件缓存 12 小时左右，所以「每分钟都更新」的场景用 `gh-proxy.com`，只求稳用 jsDelivr。
+
+**都不行就自建**：仓库里带了一份 Cloudflare Worker 代理脚本 `tools/cf-proxy-worker.js`，
+粘到 Workers 里部署，绑自己域名，然后把它当前缀用（免费额度够个人用，不怕公共加速站失效）。
 
 ### `tvbox.json` 是什么
 
@@ -29,29 +68,31 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 | 项目 | 数值 |
 |---|---|
-| 站点总数 | 436（key/name 双重去重 + 死链/重复源黑名单，零重复） |
-| 构成 | JS 源 246 · jar 内置 194 · 直连 API 52 · Python 源 14 |
-| 直播源 | 14 个（URL 规范化去重） |
-| 解析 | 48 个 |
+| 站点总数 | 434（key/name 双重去重 + 死链黑名单 + 规则同源合并，零重复） |
+| 构成 | JS 源 203 · jar 内置 174 · 直连 API 44 · Python 源 13 |
+| 直播源 | 13 个（URL 规范化 + 同格式列表重合度去重） |
+| 解析 | 38 个（同接口只留一条） |
+| 广告过滤 | 60 条（原 118 条，去重 58） |
+| DNS | 前 3 个是阿里 / DNSPod / 360 国内 DoH，境外解析器降为兜底 |
 | spider | `./jar/spider.jar`（1.85 MB，172 个内置类） |
-| 体积 | 112 KB |
+| 体积 | 96 KB |
 
 列表按「工具箱 → 影视 → APP → 网盘 → 直播 → 短剧 → 听书」顺序排列，打开即有序。
 
 内置 **555电影** 专项规则（`js/555电影.js`）：域名从发布页 `data-info` 自动解析，换域名不用改配置；前 12 集直连 m3u8 秒开，长剧其余集交给嗅探。
 
-合并取舍与重新生成方法见 [docs/合并说明.md](docs/合并说明.md)。
+合并取舍与重新生成方法见 [docs/合并说明.md](docs/合并说明.md)，死链与重复源的判定过程见 [docs/源体检报告.md](docs/源体检报告.md)。
 
-**GitHub 访问慢**时，在地址前加代理前缀（任选一个）：
+### 本版做的优化（2026-11-09）
 
-```
-https://gh-proxy.net/
-https://github.moeyy.xyz/
-https://gh-proxy.com/
-https://ghproxy.net/
-```
-
-例：`https://gh-proxy.net/https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json`
+| # | 项 | 之前 → 之后 |
+|---|---|---|
+| 1 | 广告过滤规则去重 | 118 → **60** 条（同名重复占一半，白占启动时间） |
+| 2 | 解析接口去重 | 48 → **38** 个（「虾米 / -虾米-」「云解析 / 淘片」是同一个 url 挂三个名字） |
+| 3 | 直播源去重 | 14 → **13** 个（`tvboxtv.txt` 与 `tvlive.txt` 频道重合 99.7%）；两个同名「初秋语」改为 `•M3U` / `•TXT` 区分 |
+| 4 | DNS 解析器 | 原本只有 Google / Cloudflare / Quad9 等境外 DoH，国内处处超时 → 前置阿里 / DNSPod / 360 |
+| 5 | 失效加速站本地化 | `gh-proxy.net`（已被劫持）、`github.moeyy.xyz`（已注销）上的 7 个站点，引擎与规则全部改指向仓库自带的 `./lib` + 本地规则 |
+| 6 | 规则同源合并 | 本地化后有 2 个站点与已有条目完全同源，合并掉（436 → **434**） |
 
 ---
 
@@ -59,13 +100,14 @@ https://ghproxy.net/
 
 ```
 .
-├── tvbox.json             ⭐ 全量合并配置（436 站，推荐单地址接入）
+├── tvbox.json             ⭐ 全量合并配置（434 站，推荐单地址接入）
+├── repo-cn.json           多仓入口·加速版（子地址已套 gh-proxy.com，国内可直接用）
 ├── tvbox-wmz.json         wmz 原版配置（95 站，配 jar/wmz.jar）
 ├── repo.json              多仓入口（客户端显示仓库列表）
 ├── *.json                 其余独立配置（保留原有订阅地址，勿移动/改名）
 ├── *.m3u / *.txt          直播源（见下表）
 ├── jar/                   spider 包（fan.txt 实为 jar，仅改扩展名绕 MIME 检查）
-├── js/                    drpy2 JS 规则
+├── js/                    drpy2 JS 规则（js/ext/ 放上游加密规则的明文版）
 ├── lib/                   解析引擎 + 代理内核 + token.json（密钥配置）
 ├── json/                  站点规则集（网盘 / 磁力 / 各类 API）
 ├── py/                    PY 源（TVBox Python 支持）
