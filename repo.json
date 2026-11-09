@@ -1,8 +1,12 @@
 {
   "urls": [
     {
-      "name": "🚀 全量合并 · 493 站（推荐）",
+      "name": "🚀 全量合并 · 506 站（推荐）",
       "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox.json"
+    },
+    {
+      "name": "🎬 wmz 原版 · 95 站（含 AList/115/4K网盘）",
+      "url": "https://raw.githubusercontent.com/xiaolei7172/tvbox/master/tvbox-wmz.json"
     },
     {
       "name": "📺 家庭电视 · jsm（精简，158 站）",

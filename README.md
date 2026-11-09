@@ -13,29 +13,32 @@ OK影视、TVBox、猫影视配置文件集合。所有资源均来自各路大�
 
 | 需求 | 配置地址 | 点播源 | 直播 | 说明 |
 |---|---|---:|---:|---|
-| **⭐ 一站式（推荐）** | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox.json` | **493** | 14 | 全仓合并版，一次接入所有源 |
+| **⭐ 一站式（推荐）** | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox.json` | **506** | 14 | 全仓合并版，一次接入所有源 |
+| wmz 原版 | `https://raw.githubusercontent.com/<user>/tvbox/master/tvbox-wmz.json` | 95 | 2 | 补齐主配置收不了的 16 个 jar 专属站（AList / 115 / 4K 网盘） |
 | 多仓入口 | `https://raw.githubusercontent.com/<user>/tvbox/master/repo.json` | — | — | 客户端显示仓库列表，自行切换 |
 | 电视首选 | `https://raw.githubusercontent.com/<user>/tvbox/master/jsm.json` | 158 | 3 | 家庭电视适用，已删 YouTube 直播 |
 | 手机 / 综合 | `https://raw.githubusercontent.com/<user>/tvbox/master/dianshi.json` | 159 | 1 | 电视端 + 自定义 app_sites |
 | 大而全 | `https://raw.githubusercontent.com/<user>/tvbox/master/0821.json` | 86 | 16 | 饭太硬底包 + 多直播线路 |
 | 极简 | `https://raw.githubusercontent.com/<user>/tvbox/master/0827.json` | 33 | 0 | 仅 fongmi jar，启动快 |
-| JS 规则为主 | `https://raw.githubusercontent.com/<user>/tvbox/master/js.json` | 298 | 2 | drpy2 全量 JS 源 |
+| JS 规则为主 | `https://raw.githubusercontent.com/<user>/tvbox/master/js.json` | 296 | 2 | drpy2 全量 JS 源 |
 | 潇洒接口 | `https://raw.githubusercontent.com/<user>/tvbox/master/xiaosa/api.json` | 112 | 1 | 上游自动更新 |
 
 ### `tvbox.json` 是什么
 
-由仓库内 13 个配置合并而成，可直接单地址接入：
+由仓库内 13 个配置 + 外部源 wmz 合并而成，可直接单地址接入：
 
 | 项目 | 数值 |
 |---|---|
-| 站点总数 | 493（key/name 双重去重，零重复） |
-| 构成 | JS 源 246 · jar 内置 185 · 直连 API 52 · Python 源 10 |
+| 站点总数 | 506（key/name 双重去重，零重复） |
+| 构成 | JS 源 246 · jar 内置 194 · 直连 API 52 · Python 源 14 |
 | 直播源 | 14 个（URL 规范化去重） |
 | 解析 | 48 个 |
-| spider | `./jar/spider.jar`（1.85 MB，122 个内置类） |
-| 体积 | 110 KB |
+| spider | `./jar/spider.jar`（1.85 MB，172 个内置类） |
+| 体积 | 112 KB |
 
 列表按「工具箱 → 影视 → APP → 网盘 → 直播 → 短剧 → 听书」顺序排列，打开即有序。
+
+内置 **555电影** 专项规则（`js/555电影.js`）：域名从发布页 `data-info` 自动解析，换域名不用改配置；前 12 集直连 m3u8 秒开，长剧其余集交给嗅探。
 
 合并取舍与重新生成方法见 [docs/合并说明.md](docs/合并说明.md)。
 
@@ -56,7 +59,8 @@ https://ghproxy.net/
 
 ```
 .
-├── tvbox.json             ⭐ 全量合并配置（493 站，推荐单地址接入）
+├── tvbox.json             ⭐ 全量合并配置（506 站，推荐单地址接入）
+├── tvbox-wmz.json         wmz 原版配置（95 站，配 jar/wmz.jar）
 ├── repo.json              多仓入口（客户端显示仓库列表）
 ├── *.json                 其余独立配置（保留原有订阅地址，勿移动/改名）
 ├── *.m3u / *.txt          直播源（见下表）
@@ -73,16 +77,18 @@ https://ghproxy.net/
 ├── cat/                   猫影视 CatVodOpen 整套规则 + dist 构建产物
 ├── xiaosa/                潇洒接口完整镜像（有独立对外 URL）
 ├── live/                  省级运营商 IPTV 源
+├── sources/               外部源快照（wmz.txt，base64 原样存放）
 ├── tools/                 ★ 自动更新流水线 · 配置合并 · 自检
 ├── archive/               已停用资源归档
 └── docs/                  文档
 ```
 
-### 三个工具
+### 工具
 
 | 脚本 | 作用 |
 |---|---|
-| `tools/merge_config.py` | 13 个配置 → `tvbox.json` + `repo.json` |
+| `tools/merge_config.py` | 13 配置 + wmz → `tvbox.json` + `tvbox-wmz.json` + `repo.json` |
+| `tools/refresh_wmz.py` | 刷新 wmz 配置快照与配套 jar（`--check` 只检查不写） |
 | `tools/check_health.py` | 9 项自检，退出码可接 CI |
 | `tools/tvbox.py` / `xiao.py` / `fty.py` / `build_local.py` | Actions 每日自动更新用 |
 
@@ -103,9 +109,15 @@ https://ghproxy.net/
 
 ### 自动更新
 
-`.github/workflows/run.yml` 每日 05:20（UTC）拉取上游源并重写以下文件：
+`.github/workflows/run.yml` 每日 05:20（UTC）执行完整流水线：
 
-`dianshi.json` · `jsm.json` · `fty.json` · `jar/fan.txt` · `jar/spider.jar` · `FTY/` · `xiaosa/`
+```
+拉上游源 → 刷新 wmz 快照 → 重新合并配置 → 体检 → 提交推送
+```
+
+重写的文件：`dianshi.json` · `jsm.json` · `fty.json` · `jar/fan.txt` · `jar/spider.jar` · `FTY/` · `xiaosa/` · `sources/wmz.txt` · `jar/wmz.jar` · `tvbox.json` · `tvbox-wmz.json` · `repo.json`
+
+`merge_config.py` 每次都会重新从 jar 的 dex 提取 `csp_` 白名单，所以上游换 jar 也不会让合并配置失效。任何一步失败都只跳过、不写入半成品。
 
 **fork 后需手动启用**：`Settings → Actions → General → Allow all actions and reusable workflows`。
 未启用时每日更新不会执行。
@@ -125,9 +137,9 @@ python tools/check_health.py --json     # JSON 输出
 
 ### 已知状态
 
-- 12 个本地 spider 的 MD5 声明与 jar 实际值 **全部一致**
-- 8 处站点 `ext` 引用的规则文件在上游即缺失（`lib/wogg.json`、`lib/wog.json`、`js/西门[V2].js`），
-  对应站点会降级为无筛选状态
+- 13 个本地 spider 的 MD5 声明与 jar 实际值 **全部一致**
+- 本地引用断链 **0 处**（`lib/wogg.json`、`lib/wog.json` 已统一改指 `json/wogg.json`，
+  `西门[V2]` 因上游从未提供规则文件已从配置移除）
 - 在线源失效率约 35%（抽样 70 个高频 URL），属 TVBox 源常态
 
 完整体检结论见 [docs/体检报告.md](docs/体检报告.md)。

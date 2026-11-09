@@ -126,6 +126,11 @@ jobs:
           name: fty-output
         continue-on-error: true
 
+      # 刷新 wmz 外部源：配置与配套 jar 同步升级。
+      # 任何一步失败都保留原快照，不让仓库进入半更新状态。
+      - name: Refresh wmz source
+        run: python tools/refresh_wmz.py || echo "::warning::wmz 源刷新失败，沿用现有快照"
+
       # 重新生成合并配置：jar 若被上游更新，白名单会自动跟着 dex 重新提取
       - name: Merge config
         run: python tools/merge_config.py

@@ -64,6 +64,45 @@ def load(f):
     return json.loads(strip_jsonc(open(p, encoding="utf-8-sig").read()))
 
 
+def load_wmz():
+    """
+    读 sources/wmz.txt。该文件是 wmz 订阅源的原样快照：
+    前缀 YmFzZTY0** 之后是整段 base64，解出来才是配置 JSON。
+    保持原样存放，便于随时用 curl 覆盖刷新。
+    """
+    import base64
+    p = os.path.join(ROOT, "sources", "wmz.txt")
+    if not os.path.exists(p):
+        print("[!] 未找到 sources/wmz.txt，跳过 wmz 源")
+        return None
+    t = open(p, encoding="utf-8").read().strip()
+    marker = "YmFzZTY0**"
+    body = t[len(marker):] if t.startswith(marker) else t
+    body += "=" * (-len(body) % 4)
+    try:
+        return json.loads(base64.b64decode(body).decode("utf-8"))
+    except Exception as e:
+        print(f"[!] wmz 解码失败：{e}")
+        return None
+
+
+def norm_name(n):
+    """
+    站点名的语义归一化，用于跨配置去重。
+    不同配置给同一个源起名风格差异极大：
+        「快映 • 4K」 vs 「💯快映｜4K臻享」
+    去掉符号后逐层剥掉营销后缀，两边就都收敛成「快映」。
+    只剥一层不动中间词，避免把「哔哩 • 音乐」和「哔哩 • 资源」误判成同一个。
+    """
+    s = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]", "", str(n or ""))
+    for _ in range(3):
+        s2 = re.sub(r"(蓝光|秒播|臻享|臻彩|网盘|影视|资源|合集|搜索|直播|专区|剧场)$", "", s)
+        if s2 == s:
+            break
+        s = s2
+    return s.lower()
+
+
 # ── 1. 读入 ────────────────────────────────────────────────────────────────
 BASE = "jsm.json"          # 骨架 + 主站点来源
 SAME_JAR = ["jsm.json", "dianshi.json", "xiaosa/api.json"]   # 同用 spider.jar
@@ -141,10 +180,24 @@ def ext_broken(site):
 
 kept, dropped = [], []
 keys, names = set(), set()
+norms = set()                      # 归一化名称，跨配置语义去重
+pairs = set()                      # (api, ext)，同一规则被重复收录
 stat = Counter()
 
+# 这些类的 ext 只是登录态文件，真正区分站点内容的是 name
+# （「哔哩｜音乐」和「哔哩｜相声」共用同一个 cookie 文件）。
+# 对它们禁用 (api,ext) 去重，否则会把不同分区误合并。
+NAME_DISTINGUISHED = {"csp_Bili", "csp_BiliYS"}
 
-def add_sites(src_name, sites, allow_csp=False, forbid_csp=False):
+
+def add_sites(src_name, sites, allow_csp=False, forbid_csp=False, cross_dedup=False):
+    """
+    cross_dedup=True 时启用「跨配置语义去重」：
+    按归一化名称 + (api, ext) 判断是否已有等价站点。
+    只给 wmz 这种「来自另一套命名体系」的源打开 —— 仓库内原有 13 个配置
+    彼此 key/name 体系一致，直接按 key/name 去重就够；对它们启用归一化
+    判断反而会把「本地视频」「爱看」这类本来合法的站误判成重复。
+    """
     for s in sites:
         if not isinstance(s, dict):
             continue
@@ -169,12 +222,26 @@ def add_sites(src_name, sites, allow_csp=False, forbid_csp=False):
         if nm in names:
             stat[f"{src_name}:name重复"] += 1
             continue
+        nn = norm_name(nm)
+        ext_s = str(s.get("ext") or "")
+        pair = (api, ext_s)
+        if cross_dedup:
+            if nn and nn in norms:
+                stat[f"{src_name}:同名异写"] += 1
+                continue
+            if ext_s and pair in pairs and api not in NAME_DISTINGUISHED:
+                stat[f"{src_name}:同源重复"] += 1
+                continue
         if ext_broken(s):
             stat[f"{src_name}:ext断链"] += 1
             dropped.append((src_name, nm, s.get("ext")))
             continue
         keys.add(k)
         names.add(nm)
+        if nn:
+            norms.add(nn)
+        if ext_s:
+            pairs.add(pair)
         kept.append(s)
         stat[f"{src_name}:收录"] += 1
 
@@ -194,6 +261,15 @@ for f in EXTRA:
     add_sites(f, d.get("sites") or [], allow_csp=False)
     print(f"  {f:<18} 累计 {len(kept)}")
 
+# 3.3 wmz 源（外部订阅，自带 261109.jar）
+# 它 95 个站里有 79 个的 csp_ 类同样在 spider.jar 内，可直接并入；
+# 剩下 16 个依赖 261109.jar 独有类（AList/Pan115/WebDAV/Libvio 等），
+# 只能留在 tvbox-wmz.json 那份用它自己 jar 的配置里。
+WMZ = load_wmz()
+if WMZ:
+    add_sites("wmz", WMZ.get("sites") or [], allow_csp=False, cross_dedup=True)
+    print(f"  {'wmz':<18} 累计 {len(kept)}")
+
 print(f"\n站点合计 {len(kept)}，剔除 {sum(v for k, v in stat.items() if '收录' not in k)}")
 
 # ── 4. 合并 lives（URL 规范化去重）────────────────────────────────────────
@@ -205,11 +281,18 @@ def norm_url(u):
     return s.lower()
 
 
+def all_sources():
+    """按优先级产出 (名称, 配置对象)，主配置在前、wmz 垫底"""
+    for f in SAME_JAR + EXTRA:
+        d = load(f)
+        if d:
+            yield f, d
+    if WMZ:
+        yield "wmz", WMZ
+
+
 lives, seen_live = [], set()
-for f in SAME_JAR + EXTRA:
-    d = load(f)
-    if not d:
-        continue
+for f, d in all_sources():
     for lv in d.get("lives") or []:
         if not isinstance(lv, dict):
             continue
@@ -226,10 +309,7 @@ for f in SAME_JAR + EXTRA:
 
 # ── 5. 合并 parses（清洗无效项）──────────────────────────────────────────
 parses, seen_parse = [], set()
-for f in SAME_JAR + EXTRA:
-    d = load(f)
-    if not d:
-        continue
+for f, d in all_sources():
     for ps in d.get("parses") or []:
         if not isinstance(ps, dict):
             continue
@@ -314,23 +394,67 @@ def dump(obj, path):
 size = dump(out, os.path.join(ROOT, "tvbox.json"))
 print(f"\n已生成 tvbox.json  {size/1024:.1f} KB")
 
+# ── 7.2 wmz 完整体 ────────────────────────────────────────────────────────
+# 主配置受限于单一 spider，只能收 wmz 里 csp_ 兼容的 79 站。
+# 它还有 16 个站（AList / Pan115 / WebDAV / Libvio / HDmoli / 4K 网盘几组）
+# 用的是 261109.jar 独有的类，spider.jar 里根本没有，只能单独成一份、
+# 用 wmz 自己的 jar 才跑得起来。
+if WMZ:
+    wmz_sites = [dict(s) for s in (WMZ.get("sites") or [])
+                 if isinstance(s, dict) and s.get("name") and s.get("api")]
+    # wmz 原版里「🐧咕噜丨蓝光秒播」出现了两次（jar 内置一份、远程 JS 一份），
+    # 客户端会显示成两行同名条目，加后缀区分。key 保持唯一即可。
+    seen_nm = Counter()
+    for s in wmz_sites:
+        seen_nm[s["name"]] += 1
+        if seen_nm[s["name"]] > 1:
+            idx = seen_nm[s["name"]]
+            suffix = "·JS" if not str(s.get("api") or "").startswith("csp_") else f"·{idx}"
+            s["name"] = s["name"] + suffix
+            s["key"] = f'{s["key"]}_{idx}'
+    wmz_sites.sort(key=lambda s: group_of(s)[0])
+
+    w = OrderedDict()
+    # 把 wmz 的 jar 收到本地，避免运行时依赖 gitcode 的可达性。
+    # md5 必须与实际文件一致，否则 TVBox 会拒绝加载。
+    import hashlib
+    wmz_jar = os.path.join(ROOT, "jar", "wmz.jar")
+    if os.path.exists(wmz_jar):
+        h = hashlib.md5(open(wmz_jar, "rb").read()).hexdigest()
+        w["spider"] = f"./jar/wmz.jar;md5;{h}"
+    else:
+        w["spider"] = WMZ["spider"]
+    for k in ("wallpaper", "logo", "warningText", "lives", "parses",
+              "flags", "rules", "doh", "ads", "ijk"):
+        if WMZ.get(k):
+            w[k] = WMZ[k]
+    w["sites"] = wmz_sites
+    n = dump(w, os.path.join(ROOT, "tvbox-wmz.json"))
+    print(f"已生成 tvbox-wmz.json  {n/1024:.1f} KB  {len(wmz_sites)} 站（jar/wmz.jar）")
+
 # ── 7.5 多仓入口 repo.json ────────────────────────────────────────────────
 # TVBox / OK影视 的「多仓」格式：客户端先展示仓库列表，用户选一个进入。
 RAW = "https://raw.githubusercontent.com/xiaolei7172/tvbox/master"
 repo = {
     "urls": [
         {"name": f"🚀 全量合并 · {len(kept)} 站（推荐）", "url": f"{RAW}/tvbox.json"},
-        {"name": "📺 家庭电视 · jsm（精简，158 站）", "url": f"{RAW}/jsm.json"},
-        {"name": "📱 综合线路 · dianshi（159 站 + 29 解析）", "url": f"{RAW}/dianshi.json"},
-        {"name": "🧩 JS 规则库 · js（298 站，drpy2 全量）", "url": f"{RAW}/js.json"},
-        {"name": "🎯 大而全 · 0821（多直播线路）", "url": f"{RAW}/0821.json"},
-        {"name": "⚡ 极简 · 0827（33 站，启动快）", "url": f"{RAW}/0827.json"},
-        {"name": "☁️ 网盘专精 · 0825（135 站）", "url": f"{RAW}/0825.json"},
-        {"name": "🍚 饭太硬 · fty", "url": f"{RAW}/fty.json"},
-        {"name": "🌊 潇洒 · xiaosa", "url": f"{RAW}/xiaosa/api.json"},
-        {"name": "💮 香雅情 · XYQ", "url": f"{RAW}/XYQ.json"},
     ]
 }
+if WMZ:
+    repo["urls"].append(
+        {"name": f"🎬 wmz 原版 · {len(WMZ.get('sites') or [])} 站（含 AList/115/4K网盘）",
+         "url": f"{RAW}/tvbox-wmz.json"})
+repo["urls"] += [
+    {"name": "📺 家庭电视 · jsm（精简，158 站）", "url": f"{RAW}/jsm.json"},
+    {"name": "📱 综合线路 · dianshi（159 站 + 29 解析）", "url": f"{RAW}/dianshi.json"},
+    {"name": "🧩 JS 规则库 · js（298 站，drpy2 全量）", "url": f"{RAW}/js.json"},
+    {"name": "🎯 大而全 · 0821（多直播线路）", "url": f"{RAW}/0821.json"},
+    {"name": "⚡ 极简 · 0827（33 站，启动快）", "url": f"{RAW}/0827.json"},
+    {"name": "☁️ 网盘专精 · 0825（135 站）", "url": f"{RAW}/0825.json"},
+    {"name": "🍚 饭太硬 · fty", "url": f"{RAW}/fty.json"},
+    {"name": "🌊 潇洒 · xiaosa", "url": f"{RAW}/xiaosa/api.json"},
+    {"name": "💮 香雅情 · XYQ", "url": f"{RAW}/XYQ.json"},
+]
 repo_path = os.path.join(ROOT, "repo.json")
 open(repo_path, "w", encoding="utf-8", newline="\n").write(
     json.dumps(repo, ensure_ascii=False, indent=2) + "\n")
