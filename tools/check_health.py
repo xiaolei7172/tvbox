@@ -155,6 +155,30 @@ def resolve_local(ref, src):
     return "miss", r
 
 
+def looks_like_secret(tag, sample, path=""):
+    """剔除明显的误报：本地路径引用、占位符、第三方加密库自带的测试密钥。"""
+    low = sample.lower()
+    # 指向本地文件 / clan:// / 回环地址的 cookie 字段是路径引用，不是凭证
+    if tag in ("cookie", "password"):
+        for marker in ("clan://", "127.0.0.1", "localhost", "./", "http://", "https://"):
+            if marker in low and "=" not in low.split(marker, 1)[-1]:
+                return False
+        if tag == "password":
+            val = sample.split(":")[-1].strip(" \"'")
+            if val in {"agree", "", "true", "false", "[type=password]"}:
+                return False
+    # 第三方加密库内置的示例/测试密钥，非泄漏
+    if tag == "private-key":
+        base = os.path.basename(path).lower()
+        for lib in ("node-rsa", "jsencrypt", "crypto", "drpy", "cloud.min", "quark.min", "cheerio"):
+            if lib in base:
+                return False
+    # 占位符
+    if "xxxxxxx" in low:
+        return False
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", action="store_true", help="输出 JSON")
@@ -236,7 +260,9 @@ def main():
                     refs_miss.append({"file": cfg["file"], "field": tag, "ref": r})
     report["refs"] = {"ok": refs_ok, "missing": refs_miss}
     if refs_miss:
-        report["p0"].append(f"{len(refs_miss)} 处本地引用断链")
+        # 断链通常源于上游删改规则文件，属功能降级而非配置不可用，
+        # 因此归入 P1；spider 文件缺失才是 P0（见下一节）。
+        report["p1"].append(f"{len(refs_miss)} 处本地引用断链")
 
     # ---------- 5. spider MD5 ----------
     spider_rows = []
@@ -299,9 +325,15 @@ def main():
             except Exception:
                 continue
             for rx, tag in SECRET_PATTERNS:
+                # JS/库代码里 `cookie = "..."` 多为变量拼接，误报率高；
+                # 仅对 JSON/配置类文件做通用 Cookie 检测。
+                if e in {".js", ".py"} and tag in ("cookie", "password"):
+                    continue
                 for m in rx.finditer(t):
-                    secrets.append({"file": rel(p), "type": tag,
-                                    "sample": m.group(0)[:90].replace("\n", " ")})
+                    snip = m.group(0)[:90].replace("\n", " ")
+                    if not looks_like_secret(tag, snip, p):
+                        continue
+                    secrets.append({"file": rel(p), "type": tag, "sample": snip})
         seen, uniq = set(), []
         for s in secrets:
             k = (s["file"], s["type"], s["sample"][:40])
